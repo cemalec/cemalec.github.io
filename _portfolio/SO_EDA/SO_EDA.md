@@ -1,7 +1,4 @@
----
-layout: post
-title: Student Outcomes - Exploratory Data Analysis
----
+
 ## Exploratory Data Analysis
 
 Questions to answer:
@@ -130,7 +127,7 @@ ax1 = ax1.set(title='Student Outcomes Reported on 2013 Transcript',
        xlabel='Student Outcome',
        ylabel='Thousands of Students')
 
-keep_cats = [2,3,4,5,6,7,8,9]
+keep_cats = [0,1,2,3,4,5,6,7]
 ax2 = fig.add_subplot(1,2,2)
 ax2 = sns.barplot(x='category',y='estimate',data = df_temp.iloc[keep_cats,:])
 for item in ax2.get_xticklabels():
@@ -143,12 +140,14 @@ plt.show()
 ```
 
 
-![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/SO_EDA/output_9_0.png "Figure 1")
+![png](output_9_0.png)
+
+
 ## What do students believe their educational attainment will be?
 
 Belief is a powerful thing. Believing you will succeed is not sufficient to success, but it is necessary. Here we see that the number of students who believe that they will complete 'less than high school' is tiny, much smaller than the 'dropped out' count. A great number are under 'don't know', which is a reasonable response for someone who is 14-15. This says to me that students generally do not plan on dropping out.
 
-I also see that most people really believe in their own follow-through, as 'start a(n) X degree' are all much lower counts than 'finish a(n) X degree'.
+I also see that most people really believe in their own follow-through, as 'start a(n) X degree' are all much lower counts than 'finish a(n) X degree'. The red line is the number of students who dropped out.
 
 
 ```python
@@ -161,6 +160,7 @@ for item in ax1.get_xticklabels():
 ax1 = ax1.set(title='Student Expected Outcomes',
        xlabel='Student Outcome',
        ylabel='Thousands of Students')
+plt.axhline(y = 20,color = 'red')
 plt.show()
 ```
 
