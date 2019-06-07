@@ -140,7 +140,7 @@ plt.show()
 ```
 
 
-![alt text](https://github.com/cemalec/cemalec.github.io/raw/master/output_9_0.png "Figure 1")
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/output_9_0.png "Figure 1")
 
 
 ## What do students believe their educational attainment will be?
@@ -165,7 +165,7 @@ plt.show()
 ```
 
 
-![png](output_11_0.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/output_11_0.png "Figure 2")
 
 
 ## What is the distribution of mathematics scores
@@ -190,7 +190,7 @@ plt.show()
 ```
 
 
-![png](output_13_0.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/output_13_0.png "Figure 3")
 
 
 ## What does administration think about problems at the school?
@@ -251,7 +251,7 @@ plt.show()
 ```
 
 
-![png](output_16_0.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/output_16_0.png "Figure 4")
 
 
 ## Are there any interesting variables that span multiple years in the study?
@@ -627,5 +627,5 @@ plt.show()
 ```
 
 
-![png](output_21_0.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/output_21_0.png "Figure 5")
 
