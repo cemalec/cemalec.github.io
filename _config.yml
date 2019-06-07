@@ -87,5 +87,5 @@ exclude:
 
 theme: jekyll-theme-minimal
 collections: 
-  Data-Science-Porfolio:
+  portfolio:
     output: true  
