@@ -143,9 +143,7 @@ plt.show()
 ```
 
 
-![alt text][Fig1]
-
-[Fig1]: https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/SO_EDA/output_9_0.png "Figure 1"
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/SO_EDA/output_9_0.png "Figure 1")
 ## What do students believe their educational attainment will be?
 
 Belief is a powerful thing. Believing you will succeed is not sufficient to success, but it is necessary. Here we see that the number of students who believe that they will complete 'less than high school' is tiny, much smaller than the 'dropped out' count. A great number are under 'don't know', which is a reasonable response for someone who is 14-15. This says to me that students generally do not plan on dropping out.
