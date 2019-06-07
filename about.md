@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+I am a scientist with extensive experience in data analysis, data visualization, and machine learning. I take the time to get to know the data and explain the story it tells.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[cemalec[at]gmail[dot]com](mailto:cemalec@gmail.com)
