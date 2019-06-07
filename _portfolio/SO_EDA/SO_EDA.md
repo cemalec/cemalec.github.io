@@ -144,7 +144,7 @@ plt.show()
 ```
 
 
-![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/output_9_0.png "Figure 1")
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/SO_EDA/output_9_0.png "Figure 1")
 
 
 ## What do students believe their educational attainment will be?
@@ -169,7 +169,7 @@ plt.show()
 ```
 
 
-![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/output_11_0.png "Figure 2")
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/SO_EDA/output_11_0.png "Figure 2")
 
 
 ## What is the distribution of mathematics scores
@@ -194,7 +194,7 @@ plt.show()
 ```
 
 
-![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/output_13_0.png "Figure 3")
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/SO_EDA/output_13_0.png "Figure 3")
 
 
 ## What does administration think about problems at the school?
@@ -255,7 +255,7 @@ plt.show()
 ```
 
 
-![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/output_16_0.png "Figure 4")
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/SO_EDA/output_16_0.png "Figure 4")
 
 
 ## Are there any interesting variables that span multiple years in the study?
@@ -631,5 +631,5 @@ plt.show()
 ```
 
 
-![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/output_21_0.png "Figure 5")
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/SO_EDA/output_21_0.png "Figure 5")
 
