@@ -86,5 +86,6 @@ exclude:
   - CNAME
 
 theme: jekyll-theme-minimal
-collections: - Data-Science-Porfolio
-  output: true
+collections: 
+  Data-Science-Porfolio:
+    output: true
