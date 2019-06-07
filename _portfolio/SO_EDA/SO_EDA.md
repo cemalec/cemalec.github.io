@@ -140,7 +140,7 @@ plt.show()
 ```
 
 
-![png](output_9_0.png)
+![alt text](https://github.com/cemalec/cemalec.github.io/raw/master/output_9_0.png "Figure 1")
 
 
 ## What do students believe their educational attainment will be?
