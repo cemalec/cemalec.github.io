@@ -1,4 +1,7 @@
-
+---
+layout: post
+title: Student Outcomes - Exploratory Data Analysis
+---
 ## Exploratory Data Analysis
 
 Questions to answer:
