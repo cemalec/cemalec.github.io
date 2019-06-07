@@ -1,3 +1,7 @@
+---
+layout: post
+title: Student Outcomes- Data Wrangling
+---
 
 ## Data Wrangling
 
