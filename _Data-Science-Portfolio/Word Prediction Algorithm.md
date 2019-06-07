@@ -1,3 +1,9 @@
+---
+layout: post
+title: Word Prediction Algorithm
+---
+
+
 A prediction algorithm
 ========================================================
 
