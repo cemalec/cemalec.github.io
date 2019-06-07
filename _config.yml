@@ -88,4 +88,4 @@ exclude:
 theme: jekyll-theme-minimal
 collections: 
   portfolio:
-    output: true  
+    output: true
