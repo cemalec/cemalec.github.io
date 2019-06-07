@@ -1,3 +1,7 @@
+---
+layout: page
+title: Student Outcomes - Exploratory Data Analysis
+---
 
 ## Exploratory Data Analysis
 
