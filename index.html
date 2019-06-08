@@ -1,24 +1,54 @@
 ---
 layout: default
 ---
+<html>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
+        <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
 
-<div class="row">
-
-  {% for portfolio in site.portfolio %}
+        <ul>
+          {% if site.show_downloads %}
+            <li class="download"><a class="buttons" href="{{ site.github.zip_url }}">Download ZIP</a></li>
+            <li class="download"><a class="buttons" href="{{ site.github.tar_url }}">Download TAR</a></li>
+          {% endif %}
+          <li><a class="buttons github" href="{{ site.github.repository_url }}">View On GitHub</a></li>
+        </ul>
+      </header>
+    <div class="row">
+      {% for portfolio in site.portfolio %}
     
-    <a href="{{ portfolio.url | prepend: site.baseurl }}">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="panel panel-primary">
-          <h1 div class="panel-heading">
-              {{ portfolio.title }}
+        <a href="{{ portfolio.url | prepend: site.baseurl }}">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="panel panel-primary">
+              <h1 div class="panel-heading">
+                  {{ portfolio.title }}
+             </div>
+              <div class="panel-body">
+                  {{ portfolio.excerpt }}
+              </div>
+            </div>
           </div>
-          <div class="panel-body">
-            {{ portfolio.excerpt }}
-          </div>
-        </div>
-      </div>
-    </a>
+        </a>
+      {% endfor %}
+  
+    </div>
 
-  {% endfor %}
-
-</div>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+   </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    {% if site.google_analytics %}
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+  </body>
+</html>
