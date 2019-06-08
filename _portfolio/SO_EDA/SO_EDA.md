@@ -3,7 +3,7 @@ layout: page
 title: Student Outcomes - Exploratory Data Analysis
 ---
 
-## Exploratory Data Analysis
+After data wrangling, an important step is to answer some initial questions about the data and create visualizations of variables.
 
 Questions to answer:
 - What are the proportions of real student outcomes?
