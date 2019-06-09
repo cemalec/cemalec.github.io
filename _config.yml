@@ -85,7 +85,7 @@ exclude:
   - README.md
   - CNAME
 
-theme: jekyll-theme-dinky
+theme: jekyll-theme-leap-day
 collections: 
   portfolio:
     output: true
