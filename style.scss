@@ -96,6 +96,7 @@ ol ul, ul ol, ul ul, ol ol {
 
 ul ul, ol ul {
   list-style-type: circle;
+	clear: left;
 }
 
 em, i {
@@ -152,27 +153,6 @@ img {
 
 .wrapper-masthead {
   margin-bottom: 50px;
-}
-.innerLeft ul {
-	width:199px;
-	float:left;
-	margin:0px;
-	padding:0px 0 0 12px;
-	list-style:none;
-	min-height:10px;
-}
-.innerLeft ul li{
-	padding:0px;
-	margin:0px 0 10px 0;
-	height:18px;
-    clear: left;
-}
-.innerLeft ul li a{
-	background: red;
-    display:block;
-}
-.innerLeft ul li ul li a{
-    background: blue;
 }
 
 .masthead {
