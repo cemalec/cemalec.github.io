@@ -154,15 +154,6 @@ img {
   margin-bottom: 50px;
 }
 
-.masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
-
-  @include mobile {
-    text-align: center;
-  }
-}
-
 .innerLeft-masthead ul {
     width:199px;
     float:left;
@@ -188,6 +179,15 @@ img {
     padding:0px;
     margin:0px 0 10px 0;
     height:18px;
+}
+
+.masthead {
+  padding: 20px 0;
+  border-bottom: 1px solid $lightGray;
+
+  @include mobile {
+    text-align: center;
+  }
 }
 
 .site-avatar {
