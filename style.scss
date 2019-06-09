@@ -238,24 +238,30 @@ nav {
 }
 
 .innerLeft ul {
-	width:199px;
-	float:left;
-	margin:0px;
-	padding:0px 0 0 12px;
-	list-style:none;
-	min-height:10px;
+    width:199px;
+    float:left;
+    margin:0px;
+    padding:0px 0 0 12px;
+    list-style:none;
+    min-height:10px;
 }
 .innerLeft ul li{
-	padding:0px;
-	margin:0px 0 10px 0;
-	height:18px;
+    padding:0px;
+    margin:0px 0 10px 0;
+    height:18px;
 }
 .innerLeft ul li a{
-	background: red;
-    display:inline-block;
+    background: red;
+    display:block;
 }
 .innerLeft ul li ul li a{
     background: blue;
+}
+.innerLeft ul li {
+    clear: left; /* Added */
+    padding:0px;
+    margin:0px 0 10px 0;
+    height:18px;
 }
 
 //
