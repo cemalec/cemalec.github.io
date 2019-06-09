@@ -153,32 +153,26 @@ img {
 .wrapper-masthead {
   margin-bottom: 50px;
 }
-
-.innerLeft-masthead ul {
-    width:199px;
-    float:left;
-    margin:0px;
-    padding:0px 0 0 12px;
-    list-style:none;
-    min-height:10px;
+.innerLeft ul {
+	width:199px;
+	float:left;
+	margin:0px;
+	padding:0px 0 0 12px;
+	list-style:none;
+	min-height:10px;
 }
-.innerLeft-masthead ul li{
-    padding:0px;
-    margin:0px 0 10px 0;
-    height:18px;
+.innerLeft ul li{
+	padding:0px;
+	margin:0px 0 10px 0;
+	height:18px;
+    clear: left;
 }
-.innerLeft-masthead ul li a{
-    background: red;
+.innerLeft ul li a{
+	background: red;
     display:block;
 }
-.innerLeft-masthead ul li ul li a{
+.innerLeft ul li ul li a{
     background: blue;
-}
-.innerLeft-masthead ul li {
-    clear: left; /* Added */
-    padding:0px;
-    margin:0px 0 10px 0;
-    height:18px;
 }
 
 .masthead {
