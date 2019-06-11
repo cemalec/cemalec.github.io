@@ -88,4 +88,4 @@ exclude:
 theme: jekyll-theme-leap-day
 collections: 
   portfolio:
-    output: true #
+    output: true
