@@ -1,7 +1,7 @@
 ---
 title: Student Outcomes - Statistical Inference
 layout: default
-permalink: \SO_statistical_inference
+permalink: /so_statistical_inference/
 ---
 
 Finding quanitative relationships in the data is an important task for any data scientist. Here I look at a few questions about how the students in the 'dropout' and 'nondropout' groups differ. I make use of t-tests, though the degrees of freedom in this case are large enough that it is very nearly a z-test.
