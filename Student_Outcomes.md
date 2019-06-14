@@ -9,9 +9,9 @@ Here I go through the steps of analyzing the NCES longitudinal survey of 2009-20
 The repository for this project is located [here](https://github.com/cemalec/Data-Science-Porfolio/tree/master/Capstone%20ProjectOne)
 Or read through the notebooks below
 
-- <a href = "https://github.com/cemalec/cemalec.github.io/blob/master/_portfolio/SO_data_wrangling.md">Data Wrangling</a>
-- <a href = "_portfolio/SO_EDA/so_eda.md">Exploratory Analysis</a>
-- [Statistical Inference](_portfolio/so_statistical_inference)
+- [Data Wrangling](_portfolio/so_data_wrangling.md)
+- [Exploratory Analysis](_portfolio/so_eda/so_eda.md)
+- [Statistical Inference](_portfolio/so_statistical_inference.md)
 - Baseline Model
 - Model Tuning
 - Final Conclusions
