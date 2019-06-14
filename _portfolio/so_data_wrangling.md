@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Student Outcomes- Data Wrangling
 permalink: /so_data_wrangling/
 ---
