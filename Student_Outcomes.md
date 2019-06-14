@@ -11,7 +11,7 @@ Or read through the notebooks below
 
 - <a href = "https://github.com/cemalec/cemalec.github.io/blob/master/_portfolio/SO_data_wrangling.md">Data Wrangling</a>
 - <a href = "_portfolio/SO_EDA/so_eda.md">Exploratory Analysis</a>
-- [Statistical Inference](portfolio/so_statistical_inference)
+- [Statistical Inference](_portfolio/so_statistical_inference)
 - Baseline Model
 - Model Tuning
 - Final Conclusions
