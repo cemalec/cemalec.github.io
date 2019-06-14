@@ -1,5 +1,5 @@
 ---
-title: Statistical Inference
+title: Student Outcomes - Statistical Inference
 layout: default
 permalink: \SO_statistical_inference
 ---
