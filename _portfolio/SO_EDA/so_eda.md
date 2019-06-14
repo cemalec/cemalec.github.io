@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Student Outcomes - Exploratory Data Analysis
 permalink: /so_eda/
 ---
