@@ -10,7 +10,7 @@ The repository for this project is located [here](https://github.com/cemalec/Dat
 Or read through the notebooks below
 
 - <a href = "https://github.com/cemalec/cemalec.github.io/blob/master/_portfolio/SO_data_wrangling.md">Data Wrangling</a>
-- <a href = "{{_portfolio}} so_eda/so_eda">Exploratory Analysis</a>
+- <a href = "_portfolio/so_eda/so_eda">Exploratory Analysis</a>
 - <a href = "{{site.portfolio}} /so_statistical_inference">Statistical Inference</a>
 - Baseline Model
 - Model Tuning
