@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Student Outcomes - Exploratory Data Analysis
+permalink: /so_eda/
 ---
 
 After data wrangling, an important step is to answer some initial questions about the data and create visualizations of variables.
