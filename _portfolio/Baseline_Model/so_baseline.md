@@ -299,7 +299,7 @@ plt.show()
 ```
 
 
-![png](output_18_0.png)
+![png](_portfolio/Baseline_Model/output_18_0.png)
 
 
 
@@ -325,7 +325,7 @@ plt.title('Precision and Recall')
 
 
 
-![png](output_19_1.png)
+![png](_portfolio/Baseline_Model/output_19_1.png)
 
 
 
