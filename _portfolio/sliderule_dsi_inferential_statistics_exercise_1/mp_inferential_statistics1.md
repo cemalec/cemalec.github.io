@@ -1,4 +1,8 @@
-
+---
+title: Inferential Statistics and Body Temperature
+layout: default
+permalink: /mp_statistical_inference1/
+---
 # What is the True Normal Human Body Temperature? 
 
 #### Background
