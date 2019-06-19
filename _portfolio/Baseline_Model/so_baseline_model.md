@@ -1,7 +1,7 @@
 ---
 title: Baseline Statistical Model
 layout: default
-permalink: /so-baseline/
+permalink: /so_baseline/
 ---
 
 # Baseline Model
