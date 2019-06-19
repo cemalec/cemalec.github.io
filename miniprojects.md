@@ -9,7 +9,7 @@ A collection of minor projects and notebooks I've completed for various class pr
 - [Clustering algorithms](_portfolio/Mini_Project_Clustering/mp_clustering.md)
 - [Working with JSON](_portfolio/mp_json.md)
 - [Statistical inferance and EDA: Hospital readmissions](_portfolio/sliderule_dsi_inferential_statistics_exercise_3/mp_inferential_statistics3.md)
-- [Statistical inferance and EDA: Human body temperatures](_portfolio/sliderule_dsi_inferential_statistics_exercise_1/mp_statistical_inference1.md)
+- [Statistical inferance and EDA: Human body temperatures](_portfolio/sliderule_dsi_inferential_statistics_exercise_1/mp_inferential_statistics1.md)
 - [Statistical inferance and EDA: Racial discrimination in resumes](_portfolio/mp_inferential_statistics2.md)
 - [Housing analysis with Linear Regression](_portfolio/Mini_Project_Linear_Regression/mp_linear_regression.md)
 - [Analyzing height with logistic regression](_portfolio/Mini_Project_Logistic_Regression_MalecSubmission/mp_logistic_regression.md)
