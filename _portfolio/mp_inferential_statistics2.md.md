@@ -1,3 +1,8 @@
+---
+title: Inferential Statistics and Racial Discrimination
+layout: default
+permalink: /mp_inferential_statistics2
+---
 
 # Examining Racial Discrimination in the US Job Market
 
