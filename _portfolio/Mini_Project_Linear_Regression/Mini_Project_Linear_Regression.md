@@ -1,4 +1,7 @@
-
+---
+title: Linear Regression and Housing Prices
+layout: default
+permalink: /mp_linear_regression/
 # Regression in Python
 
 ***
