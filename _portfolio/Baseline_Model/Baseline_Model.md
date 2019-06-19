@@ -1,3 +1,8 @@
+---
+title: Baseline Statistical Model
+layout: default
+permalink: /so-baseline/
+---
 
 # Baseline Model
 As a simple model for this binary prediction, we choose logistic regression. This is both a conceptually simple and easy to interpret model, and can be extended to include more classes if necessary.
