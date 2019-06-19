@@ -1,4 +1,7 @@
-
+---
+title: Inferential Statistics and Hospital Readmissions
+layout: default
+permalink: mp_inferential_statistics3/
 # Hospital Readmissions Data Analysis and Recommendations for Reduction
 
 ### Background
