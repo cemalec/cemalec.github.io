@@ -1,4 +1,8 @@
-
+---
+title: API and Quandl
+layout: default
+permalink: /mp_api/
+---
 This exercise will require you to pull some data from the Qunadl API. Qaundl is currently the most widely used aggregator of financial market data.
 
 As a first step, you will need to register a free account on the http://www.quandl.com website.
