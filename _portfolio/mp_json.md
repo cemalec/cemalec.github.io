@@ -1,3 +1,8 @@
+---
+title: Reading JSON files
+layout: default
+permalink: /mp_json/
+---
 
 # JSON examples and exercise
 ****
