@@ -1,3 +1,8 @@
+---
+title: Clustering and Customer Segmentation
+layout: default
+permalink: /mp_clustering/
+---
 
 # Customer Segmentation using Clustering
 ***
