@@ -1,3 +1,8 @@
+---
+title: Naive Bayes for Text Classification
+layout: default
+permalink: /mp_naive_bayes/
+---
 
 # Basic Text Classification with Naive Bayes
 ***
