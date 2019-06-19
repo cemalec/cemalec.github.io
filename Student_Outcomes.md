@@ -12,6 +12,5 @@ Or read through the notebooks below
 - [Data Wrangling](_portfolio/so_data_wrangling.md)
 - [Exploratory Analysis](_portfolio/SO_EDA/so_eda.md)
 - [Statistical Inference](_portfolio/so_statistical_inference.md)
-- Baseline Model
-- Model Tuning
-- Final Conclusions
+- [Baseline Model](_portfolio/Baseline_Model/so_baseline.md)
+- Final Report
