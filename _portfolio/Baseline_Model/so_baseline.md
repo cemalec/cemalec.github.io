@@ -299,7 +299,7 @@ plt.show()
 ```
 
 
-![png](_portfolio/Baseline_Model/output_18_0.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Baseline_Model/output_18_0.png "Train and Test Error")
 
 
 
@@ -325,7 +325,7 @@ plt.title('Precision and Recall')
 
 
 
-![png](_portfolio/Baseline_Model/output_19_1.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Baseline_Model/output_19_1.png "Precision and Recall")
 
 
 
