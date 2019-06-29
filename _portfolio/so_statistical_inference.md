@@ -4,6 +4,7 @@ layout: default
 permalink: /so_statistical_inference/
 ---
 
+### [Previous: Exploratory Analysis](https://cemalec.github.io/so_eda) | [Next: Baseline Model](https://cemalec.github.io/so_baseline)
 Finding quanitative relationships in the data is an important task for any data scientist. Here I look at a few questions about how the students in the 'dropout' and 'nondropout' groups differ. I make use of t-tests, though the degrees of freedom in this case are large enough that it is very nearly a z-test.
 
 ```python
