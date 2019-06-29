@@ -4,7 +4,7 @@ title: Student Outcomes - Exploratory Data Analysis
 permalink: /so_eda/
 ---
 
-### [Previous: Data Wrangling](https://www.cemalec.github.io/so_data_wrangling) | [Next: Statistical Inference](https://www.cemalec.github.io/so_statistical_inference)
+### [Previous: Data Wrangling](https://cemalec.github.io/so_data_wrangling) | [Next: Statistical Inference](https://cemalec.github.io/so_statistical_inference)
 After data wrangling, an important step is to answer some initial questions about the data and create visualizations of variables.
 
 Questions to answer:
