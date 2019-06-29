@@ -4,6 +4,7 @@ title: Student Outcomes- Data Wrangling
 permalink: /so_data_wrangling/
 ---
 
+### [Next: Exploratory Analysis](/so_eda)
 The first step in any project is wrangling the data into a useable format. In this case the data is in relatively good order to begin with since it was collected by a government agency and intended for external use. However, the data is in one large file, when it would be more convenient to work with several different data frames. Also, important information contained in the codebook, such as the meaning of the columns and factor variables, needs to be turned into a more useable format.
 
 source of data: https://nces.ed.gov/EDAT/Data/Zip/HSLS_2016_v1_0_CSV_Datasets.zip
