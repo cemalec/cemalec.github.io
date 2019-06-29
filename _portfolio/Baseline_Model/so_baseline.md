@@ -3,6 +3,7 @@ title: Baseline Statistical Model
 layout: default
 permalink: /so_baseline/
 ---
+### [Previous: Statistical Inference](https://cemalec.github.io/so_statistical_inference)
 
 # Baseline Model
 As a simple model for this binary prediction, we choose logistic regression. This is both a conceptually simple and easy to interpret model, and can be extended to include more classes if necessary.
@@ -231,43 +232,6 @@ for model in models:
     print(row)
     df_cv.append(pd.DataFrame([row],columns = df_cv.columns),ignore_index = True)
 ```
-
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-
-
-    [1e-06, 'l1', 0.8841684130310535, 0.886073537816727, 0.0, 0.0]
-    [3.162277660168379e-06, 'l1', 0.8585444846637454, 0.8601638407315679, 0.1016949152542373, 0.030100334448160536]
-    [1e-05, 'l1', 0.8650219089350353, 0.861306915602972, 0.2537878787878788, 0.090625]
-    [3.1622776601683795e-05, 'l1', 0.8453038674033149, 0.8453038674033149, 0.27136752136752135, 0.21237458193979933]
-    [0.0001, 'l1', 0.8714040769670414, 0.861306915602972, 0.393048128342246, 0.2703125]
-    [0.00031622776601683794, 'l1', 0.8509239855210516, 0.8445418174890456, 0.33097595473833097, 0.3862876254180602]
-    [0.001, 'l1', 0.8539721851781291, 0.8201562202324252, 0.29833546734955185, 0.4140625]
-    [0.0031622776601683794, 'l1', 0.8584492284244618, 0.8012954848542579, 0.28900523560209423, 0.43125]
-    [0.01, 'l1', 0.866260240045723, 0.7925319108401601, 0.2758229284903519, 0.4375]
-    [0.03162277660168379, 'l1', 0.8698799771385026, 0.7889121737473804, 0.2701212789415656, 0.4390625]
-    [0.1, 'l1', 0.8707372832920556, 0.786435511526005, 0.2689721421709894, 0.4375]
-    [0.31622776601683794, 'l1', 0.8771194513240618, 0.7953895980186703, 0.2694805194805195, 0.421875]
-    [1.0, 'l1', 0.8855972566203086, 0.8009144598971233, 0.2737430167597765, 0.4096989966555184]
-    [1e-06, 'l2', 0.8765479138883597, 0.8769289388454944, 0.36666666666666664, 0.0984375]
-    [3.162277660168379e-06, 'l2', 0.8739759954277005, 0.8702610020956373, 0.3593220338983051, 0.165625]
-    [1e-05, 'l2', 0.8583539721851782, 0.8413031053534007, 0.2894736842105263, 0.265625]
-    [3.1622776601683795e-05, 'l2', 0.8291103067250905, 0.8077729091255478, 0.25151148730350664, 0.3609375]
-    [0.0001, 'l2', 0.8077729091255478, 0.7791960373404458, 0.24588576960309777, 0.4270833333333333]
-    [0.00031622776601683794, 'l2', 0.8001524099828539, 0.7557630024766622, 0.2300509337860781, 0.4548611111111111]
-    [0.001, 'l2', 0.8051057344256048, 0.7395694417984378, 0.22508038585209003, 0.46875]
-    [0.0031622776601683794, 'l2', 0.8058677843398743, 0.7268051057344256, 0.22453222453222454, 0.49331103678929766]
-    [0.01, 'l2', 0.8047247094684702, 0.722613831205944, 0.22330827067669173, 0.5138888888888888]
-    [0.03162277660168379, 'l2', 0.8020575347685274, 0.7207087064202705, 0.22353811991117692, 0.5243055555555556]
-    [0.1, 'l2', 0.8007239474185559, 0.7191846065917318, 0.22035139092240116, 0.5277777777777778]
-    [0.31622776601683794, 'l2', 0.8005334349399885, 0.718803581634597, 0.22230320699708456, 0.53125]
-    [1.0, 'l2', 0.7987235663935988, 0.7191846065917318, 0.21811594202898552, 0.53125]
-
-
 ## Plotting and Choosing the Optimal Model
 
 Optimal is always a trade-off between several competing needs. We would like a model that is as accurate as possible while performing well on unseen data. We also have to balance the 'precision', or the proportion of true positive to all positively identified variables and 'recall', or the propoportion of true positives to all observations that were actually true.
