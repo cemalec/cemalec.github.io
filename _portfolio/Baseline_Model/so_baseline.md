@@ -1,3 +1,9 @@
+---
+title: Baseline Statistical Model
+layout: default
+permalink: /so_baseline/
+---
+### [Previous: Statistical Inference](https://cemalec.github.io/so_statistical_inference)
 
 # Baseline Model
 As a simple model for this binary prediction, we choose logistic regression. This is both a conceptually simple and easy to interpret model, and can be extended to include more classes if necessary.
@@ -229,31 +235,6 @@ for model in models:
           np.median(recalls)]
     df_cv = df_cv.append(pd.DataFrame([row],columns = df_cv.columns),ignore_index = True)
 ```
-
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-    /anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
-      'precision', 'predicted', average, warn_for)
-
-
 ## Plotting and Choosing the Optimal Model
 
 Optimal is always a trade-off between several competing needs. We would like a model that is as accurate as possible while performing well on unseen data. When deciding on how to proceed with a tradeoff, it is important to identify the consequences of certain types of mistakes. Guidance from a school or school district would be important when deciding the sensible goals for precision and recall numbers.
@@ -294,7 +275,7 @@ plt.show()
 ```
 
 
-![png](output_19_0.png)
+![png](/output_19_0.png)
 
 
 
@@ -317,7 +298,7 @@ plt.show()
 ```
 
 
-![png](output_20_0.png)
+![png](/output_20_0.png)
 
 
 
@@ -452,7 +433,7 @@ plt.show()
 ```
 
 
-![png](output_27_0.png)
+![png](/output_27_0.png)
 
 
 
