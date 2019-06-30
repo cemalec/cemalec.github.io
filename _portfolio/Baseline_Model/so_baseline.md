@@ -274,7 +274,7 @@ g = g.add_legend()
 plt.show()
 ```
 
-![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/SO_Baseline_Model/output_19_0.png "Figure 1")
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Baseline_Model/output_19_0.png "Figure 1")
 
 
 
@@ -296,7 +296,7 @@ g = g.add_legend()
 plt.show()
 ```
 
-![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/SO_Baseline_Model/output_20_0.png "Figure 2")
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Baseline_Model/output_20_0.png "Figure 2")
 
 ```python
 #Train model with optimal parameters and apply to test set
@@ -408,7 +408,7 @@ plt.xlabel('Odds')
 plt.show()
 ```
 
-![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/SO_Baseline_Model/output_25_0.png "Figure 3")
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Baseline_Model/output_25_0.png "Figure 3")
 
 ## Conclusions
 
@@ -426,7 +426,7 @@ plt.xlabel('Odds')
 plt.show()
 ```
 
-![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/SO_Baseline_Model/output_27_0.png "Figure 4")
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Baseline_Model/output_27_0.png "Figure 4")
 
 
 ```python
