@@ -1,6 +1,6 @@
 ---
 title: Gradients and You- Notation
-layout: post
+layout: default
 permalink: /gradyou-intro/
 ---
 
