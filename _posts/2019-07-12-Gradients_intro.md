@@ -4,9 +4,7 @@ layout: default
 permalink: /gradyou-intro/
 ---
 
-## The issue
-
-Finding analytic gradients can be a daunting task for many. The good news is that most analytic gradients used routinely in machine learning have already been solved and implemented at blazing fast speeds. However, if you want to 'get under the hood' of machine learning algorithms, you need to become familiar with how to calculate these objects.
+Finding analytic gradients can be a daunting task for many. The good news is that most analytic gradients used routinely in machine learning have already been solved and implemented at blazing fast speeds. However, if you want to 'get under the hood' of machine learning algorithms, you need to become familiar with how to calculate these objects. Between this and subsequent posts, I will try to walk you through the math behind the gradients.
 
 ### Notation
 
