@@ -9,11 +9,11 @@ This is the first gradient in a series, for general notes on notation read this 
 
 The hinge loss is often used for support vector machines. To help keep indices straight, I'll use the following conventions:
 
-_i_ will be used for training examples
+*i* will be used for training examples
 
-_j_ will be used for classes to be categorized
+*j* will be used for classes to be categorized
 
-_k_ will be used as the feature dimensions
+*k* will be used as the feature dimensions
 
 Each training example accumulates loss according to how much weight is given to mis-categorized examples. The hinge in hinge loss comes from the fact that loss is accumulated only if the wrong score is greater than the right score by a predetermined margin. The full expression for the loss of one training example is
 
