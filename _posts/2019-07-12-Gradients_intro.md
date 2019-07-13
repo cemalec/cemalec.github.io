@@ -8,21 +8,21 @@ Finding analytic gradients can be a daunting task for many. The good news is tha
 
 ### Notation
 
-A few facts make it easier to translate mathematics into code. When calculating the gradient with respect to a matrix, you're really calculating the derivative of a function with respect to an arbitrary element of the matrix.  We refer to an arbitrary element of matrix $X$ as $X_{ij}$, which is the $i$th row and $j$th column.
+A few facts make it easier to translate mathematics into code. When calculating the gradient with respect to a matrix, you're really calculating the derivative of a function with respect to an arbitrary element of the matrix.  We refer to an arbitrary element of matrix $$X$$ as $$X_{ij}$$, which is the _i_th row and _j_th column.
 
 Two common operations are element-wise multiplication and matrix multiplication. Both can be represented as operations on an arbitrary element of the matrix. For element-wise multiplication we write that
 
-$C_{ij} = A_{ij}B_{ij}$  (element-wise product)
+$$C_{ij} = A_{ij}B_{ij}$$  (element-wise product)
 
 This obviously only works if all matrices have the same dimensions. Matrix multiplication is a type of inner product, meaning that the matrices share a common dimension which is summed over and eliminated.  We represent matrix multiplication by arbitrary elements like this
 
-$C_{ij} = \sum\limits_k A_{ik}B_{kj}$ (matrix product)
+$$C_{ij} = \sum\limits_k A_{ik}B_{kj}$$ (matrix product)
 
-Note that $C_{ij} \neq \sum\limits_k A_{ik}B_{jk}$. The columns of the first matrix must match the rows of the second. However, we can remedy a situation like this by using the transpose of a matrix, since $X_{ij} = X^T_{ji}$.
+Note that $$C_{ij} \neq \sum\limits_k A_{ik}B_{jk}$$. The columns of the first matrix must match the rows of the second. However, we can remedy a situation like this by using the transpose of a matrix, since $$X_{ij} = X^T_{ji}$$.
 
-Finally, there are times when we must denote a single element of a matrix. A matrix that is one at row $i$ and column $j$ and zero elsewhere is written 
+Finally, there are times when we must denote a single element of a matrix. A matrix that is one at row _i_ and column _j_ and zero elsewhere is written 
 
-$\delta_{ij}$ (unit matrix)
+$$\delta_{ij}$$ (unit matrix)
 
 ### The Chain Rule
 
@@ -30,17 +30,17 @@ One of the most useful theorems in calculus is the chain rule. It allows you to 
 
 Essentially, what the chain rule says is that we can treat partial differentials like fractions, so that
 
-$\dfrac{\partial f}{\partial x} = \dfrac{\partial f}{\partial y}\dfrac{\partial y}{\partial x}$
+$$\dfrac{\partial f}{\partial x} = \dfrac{\partial f}{\partial y}\dfrac{\partial y}{\partial x}$$
 
-So for example if we wanted to take the derivative of $f(x) = ln(x^2)$ could take the derivative of $f(y) = ln(y)$ and the derivative of $y = x^2$ so that
+So for example if we wanted to take the derivative of $$f(x) = ln(x^2)$$ could take the derivative of $$f(y) = ln(y)$$ and the derivative of $y = x^2$ so that
 
-$\dfrac{\partial f}{\partial x} = \dfrac{\partial ln(x^2)}{\partial x^2}\dfrac{\partial x^2}{\partial x} = \dfrac{1}{x^2}2x = \dfrac{2}{x}$
+$$\dfrac{\partial f}{\partial x} = \dfrac{\partial ln(x^2)}{\partial x^2}\dfrac{\partial x^2}{\partial x} = \dfrac{1}{x^2}2x = \dfrac{2}{x}$$
 
 ### Numpy
 
 Numpy is a huge package for dealing with arrays and vectors. For the purpose of finding gradients, I'm going to reduce numpy to four operations: indexing, summing, multiplying, and broadcasting.
 
-Numpy indexing is fairly straightforward, you specify an element of a numpy array by specifying its row and column, for example the element $X_{ij}$ is represented by
+Numpy indexing is fairly straightforward, you specify an element of a numpy array by specifying its row and column, for example the element $$X_{ij}$$ is represented by
 
 ```python
 X[i,j]
