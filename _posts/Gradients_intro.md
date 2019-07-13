@@ -1,7 +1,7 @@
 ---
-title: Gradients and You: Notation
+title: Gradients and You- Notation
 layout: post
-permalink: \gradyou-intro\
+permalink: /gradyou-intro/
 ---
 
 ## The issue
@@ -104,3 +104,5 @@ and to create a column vector input
 ```python
 y[:, np.newaxis]
 ```
+
+Now that that's out of the way, let's take a look at [SVM hinge loss](/_posts/Gradients_hingeloss)
