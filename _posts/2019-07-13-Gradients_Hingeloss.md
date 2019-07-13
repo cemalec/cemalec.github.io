@@ -66,9 +66,9 @@ L += reg*np.sum(W*W)
 
 The hinge loss can be an intimidating function at first, but it can be broken down into relatively easy to compute chunks. Similarly, the complicated gradient of the hinge loss can be broken down into easy to compute chunks via the chain rule.
 
-It is important to note that the hinge function $max(0,x)$ does not have a derivative at zero. If SVM were the subject of pure mathematics we would have to reckon with this fact, but it is not. The algorithm has been shown to work as expected in a wide range of applications, possibly because the margin values are almost never exactly zero.
+It is important to note that the hinge function $$max(0,x)$$ does not have a derivative at zero. If SVM were the subject of pure mathematics we would have to reckon with this fact, but it is not. The algorithm has been shown to work as expected in a wide range of applications, possibly because the margin values are almost never exactly zero.
 
-Away from zero, the hinge function has a derivative of zero if its argument is less than zero, and one if it is greater. Here, I choose the derivative to be zero at zero. We denote this function as $\mathbb{1}(x)$.
+Away from zero, the hinge function has a derivative of zero if its argument is less than zero, and one if it is greater. Here, I choose the derivative to be zero at zero. We denote this function as $$\mathbb{1}(x)$$.
 
 - Derivative of Loss with respect to margins: $$\dfrac{\partial L_{hinge}}{\partial m_{ij}} = \dfrac{1}{N}\sum\limits_i\sum\limits_{j'\neq y_i}\mathbb{1} (m_{ij} > 0)$$
 
