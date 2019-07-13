@@ -17,7 +17,7 @@ _k_ will be used as the feature dimensions
 
 Each training example accumulates loss according to how much weight is given to mis-categorized examples. The hinge in hinge loss comes from the fact that loss is accumulated only if the wrong score is greater than the right score by a predetermined margin. The full expression for the loss of one training example is
 
-$L_i = \sum\limits_{j\neq y_i}max(0,s_{ij} - s_{iy_i} + \Delta)$ where $s_{ij} = \sum\limits_k X_{ik}W_{kj}$
+$$L_i = \sum\limits_{j\neq y_i}max(0,s_{ij} - s_{iy_i} + \Delta)$ where $$s_{ij} = \sum\limits_k X_{ik}W_{kj}$
 
 For coding purposes, we break down the loss into a series of smaller computations.
 
