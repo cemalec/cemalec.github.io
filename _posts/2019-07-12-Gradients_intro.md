@@ -32,7 +32,7 @@ Essentially, what the chain rule says is that we can treat partial differentials
 
 $$\dfrac{\partial f}{\partial x} = \dfrac{\partial f}{\partial y}\dfrac{\partial y}{\partial x}$$
 
-So for example if we wanted to take the derivative of $$f(x) = ln(x^2)$$ could take the derivative of $$f(y) = ln(y)$$ and the derivative of $y = x^2$ so that
+So for example if we wanted to take the derivative of $$f(x) = ln(x^2)$$ could take the derivative of $$f(y) = ln(y)$$ and the derivative of $$y = x^2$$ so that
 
 $$\dfrac{\partial f}{\partial x} = \dfrac{\partial ln(x^2)}{\partial x^2}\dfrac{\partial x^2}{\partial x} = \dfrac{1}{x^2}2x = \dfrac{2}{x}$$
 
