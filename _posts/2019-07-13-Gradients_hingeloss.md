@@ -1,9 +1,9 @@
 ---
 title: Gradients and You- SVM hinge loss
 layout: default
-permlink: /gradyou_hingeloss/
+permlink: /Gradients_Hingeloss/
 ---
-This is the first gradient in a series, for general notes on notation read this [post](/_posts/Gradients_intro.md)
+This is the first gradient in a series, for general notes on notation read this [post](/_posts/Gradients_Hingeloss)
 
 ### Hinge Loss for SVM
 
