@@ -105,4 +105,4 @@ and to create a column vector input
 y[:, np.newaxis]
 ```
 
-Now that that's out of the way, let's take a look at [SVM hinge loss](/_posts/Gradients_hingeloss)
+Now that that's out of the way, let's take a look at [SVM hinge loss](/_posts/Gradients_hingeloss.md)
