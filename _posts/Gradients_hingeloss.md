@@ -1,6 +1,6 @@
 ---
 title: Gradients and You- SVM hinge loss
-layout: post
+layout: default
 permlink: /gradyou_hingeloss/
 ---
 This is the first gradient in a series, for general notes on notation read this [post](/_posts/Gradients_intro.md)
