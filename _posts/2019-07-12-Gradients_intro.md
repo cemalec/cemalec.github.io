@@ -8,7 +8,7 @@ Finding analytic gradients can be a daunting task for many. The good news is tha
 
 ### Notation
 
-A few facts make it easier to translate mathematics into code. When calculating the gradient with respect to a matrix, you're really calculating the derivative of a function with respect to an arbitrary element of the matrix.  We refer to an arbitrary element of matrix $$X$$ as $$X_{ij}$$, which is the _i_th row and _j_th column.
+A few facts make it easier to translate mathematics into code. When calculating the gradient with respect to a matrix, you're really calculating the derivative of a function with respect to an arbitrary element of the matrix.  We refer to an arbitrary element of matrix $$X$$ as $$X_{ij}$$, which is the *i*th row and *j*th column.
 
 Two common operations are element-wise multiplication and matrix multiplication. Both can be represented as operations on an arbitrary element of the matrix. For element-wise multiplication we write that
 
@@ -20,7 +20,7 @@ $$C_{ij} = \sum\limits_k A_{ik}B_{kj}$$ (matrix product)
 
 Note that $$C_{ij} \neq \sum\limits_k A_{ik}B_{jk}$$. The columns of the first matrix must match the rows of the second. However, we can remedy a situation like this by using the transpose of a matrix, since $$X_{ij} = X^T_{ji}$$.
 
-Finally, there are times when we must denote a single element of a matrix. A matrix that is one at row _i_ and column _j_ and zero elsewhere is written 
+Finally, there are times when we must denote a single element of a matrix. A matrix that is one at row *i* and column *j* and zero elsewhere is written 
 
 $$\delta_{ij}$$ (unit matrix)
 
