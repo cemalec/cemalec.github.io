@@ -3,6 +3,8 @@ title: Gradients and You: SVM hinge loss
 layout: post
 permlink: \gradyou_hingeloss\
 ---
+This is the first gradient in a series, for general notes on notation read this [post](/_posts/Gradients_intro)
+
 ### Hinge Loss for SVM
 
 The hinge loss is often used for support vector machines. To help keep indices straight, I'll use the following conventions:
