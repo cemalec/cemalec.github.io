@@ -13,4 +13,5 @@ Or read through the notebooks below
 - [Exploratory Analysis](_portfolio/SO_EDA/so_eda.md)
 - [Statistical Inference](_portfolio/so_statistical_inference.md)
 - [Baseline Model](_portfolio/Baseline_Model/so_baseline.md)
+- Extended Model
 - Final Report
