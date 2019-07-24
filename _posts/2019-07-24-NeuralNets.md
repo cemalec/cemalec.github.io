@@ -7,47 +7,47 @@ This is a post in a series about gradients.
 
 Let's start with a two layer network. The workflow is 
 
-1) A weight matrix multiplies the feature vectors ($input_1 = XW_1 + b_1$)
+1) A weight matrix multiplies the feature vectors ($$input_1 = XW_1 + b_1$$)
 
-2) The weighted features go through an activation function to create hidden features ($hidden = \alpha_1(input_1)$) 
+2) The weighted features go through an activation function to create hidden features ($$hidden = \alpha_1(input_1)$$) 
 
-3) A second weight matrix multiplies the hidden features ($input_2 = hW_2 + b_2$)
+3) A second weight matrix multiplies the hidden features ($$input_2 = hW_2 + b_2$$)
 
-4) The second layer goes through an activation function to create scores ($scores = \alpha_2(input_2)$)
+4) The second layer goes through an activation function to create scores ($$scores = \alpha_2(input_2)$$)
 
 5) A loss is computed from the scores.
 
 6) The gradient of the loss is calculated and used to optimize the weight matrices.
 
-For an example, we use an activation function of $max(0,x)$ for the hidden layer and the softmax function for the output layer. The loss is calculated as the log loss. My convention for indices is
+For an example, we use an activation function of $$max(0,x)$$ for the hidden layer and the softmax function for the output layer. The loss is calculated as the log loss. My convention for indices is
 
-- $i$: examples
-
-
-- $j$: classes
+- $$i$$: examples
 
 
-- $k$: feature dimensions
+- $$j$$: classes
 
 
-- $l$: hidden classes
+- $$k$$: feature dimensions
+
+
+- $$l$$: hidden classes
 
 The *forward pass* then looks like so:
 
-- $f^{(1)}_{il} = \sum\limits_k X_{ik} W^{(1)}_{kl} + b^{(1)}_{l}$ 1st layer weighted features
+- $$f^{(1)}_{il} = \sum\limits_k X_{ik} W^{(1)}_{kl} + b^{(1)}_{l}$$ 1st layer weighted features
 
-- $h_{il} = max(0, f^{(1)}_{il})$ hidden classes from the activation function
-
-
-- $f^{(2)}_{ij} = \sum\limits_l h^{(1)}_{il}W^{(2)}_{lj} + b^{(2)}_j$ 2nd layer weighted features
-
-- $s_{ij} = softmax(f^{(2)}_{ij})$ output layer scores
+- $$h_{il} = max(0, f^{(1)}_{il})$$ hidden classes from the activation function
 
 
-- $L_i = -log(s_{iy_i})$ log loss
+- $$f^{(2)}_{ij} = \sum\limits_l h^{(1)}_{il}W^{(2)}_{lj} + b^{(2)}_j$$ 2nd layer weighted features
+
+- $$s_{ij} = softmax(f^{(2)}_{ij})$$ output layer scores
 
 
-- $L = \dfrac{1}{N}\sum\limits_i L_i + \lambda\left(\sum\limits_{k,l}(W^{(1)}_{kl})^2 + \sum\limits_{l,j}(W^{(2)}_{lj})^2 + \sum\limits_l (b^{(1)}_{l})^2+ \sum\limits_j (b^{(2)}_{j})^2\right )$ loss with regularization
+- $$L_i = -log(s_{iy_i})$$ log loss
+
+
+- $$L = \dfrac{1}{N}\sum\limits_i L_i + \lambda\left(\sum\limits_{k,l}(W^{(1)}_{kl})^2 + \sum\limits_{l,j}(W^{(2)}_{lj})^2 + \sum\limits_l (b^{(1)}_{l})^2+ \sum\limits_j (b^{(2)}_{j})^2\right )$$ loss with regularization
 
 
 In numpy, it looks like this:
@@ -82,26 +82,26 @@ Since we need to optimize for two weight matrices and two bias vectors, our grad
 The *backward pass* looks like this:
 
 Second layer gradients, all the summation over *i* is reused for the different gradients:
-* $\dfrac{\partial L}{\partial s_{ij}} = \dfrac{1}{N}\sum\limits_i(softmax(s_{ij})-\delta_{iy_i})$ see softmax gradient
+* $$\dfrac{\partial L}{\partial s_{ij}} = \dfrac{1}{N}\sum\limits_i(softmax(s_{ij})-\delta_{iy_i})$$ see softmax gradient
 
 
-* $\dfrac{\partial L}{\partial W^{(2)}_{lj}} = \dfrac{\partial L}{\partial s_{ij}} \dfrac{\partial s_{ij}}{\partial W^{(2)}_{lj}}=\sum\limits_ih^T_{li}\dfrac{\partial L}{\partial s_{ij}}$ gradient with repect to second weight matrix (l x j)
+* $$\dfrac{\partial L}{\partial W^{(2)}_{lj}} = \dfrac{\partial L}{\partial s_{ij}} \dfrac{\partial s_{ij}}{\partial W^{(2)}_{lj}}=\sum\limits_ih^T_{li}\dfrac{\partial L}{\partial s_{ij}}$$ gradient with repect to second weight matrix (l x j)
 
 
-* $\dfrac{\partial L}{\partial b^{(2)}_j} = \dfrac{\partial L}{\partial s_{ij}} \dfrac{\partial s_{ij}}{\partial b^{(2)}_{j}}=\sum\limits_i\dfrac{\partial L}{\partial s_{ij}}$ gradient with repect to second bias vector (row vector length j)
+* $$\dfrac{\partial L}{\partial b^{(2)}_j} = \dfrac{\partial L}{\partial s_{ij}} \dfrac{\partial s_{ij}}{\partial b^{(2)}_{j}}=\sum\limits_i\dfrac{\partial L}{\partial s_{ij}}$$ gradient with repect to second bias vector (row vector length j)
 
 
 First layer gradients:
-* $\dfrac{\partial L}{\partial h_{il}} = \dfrac{\partial L}{\partial s_{ij}}\dfrac{\partial s_{ij}}{\partial h_{il}} = \sum\limits_j\dfrac{\partial L}{\partial s_{ij}}W^{(2)T}_{jl}$ gradient with respect to hidden classes (l x j)
+* $$\dfrac{\partial L}{\partial h_{il}} = \dfrac{\partial L}{\partial s_{ij}}\dfrac{\partial s_{ij}}{\partial h_{il}} = \sum\limits_j\dfrac{\partial L}{\partial s_{ij}}W^{(2)T}_{jl}$$ gradient with respect to hidden classes (l x j)
 
 
-* $\dfrac{\partial L}{\partial f_{il}} = \dfrac{\partial L}{\partial h_{il}}\dfrac{\partial h_{il}}{\partial f_{il}}=\dfrac{\partial L}{\partial h_{il}}\mathbb{1}(f_{il} > 0)$ gradient with respect to weighted features (i x l) 
+* $$\dfrac{\partial L}{\partial f_{il}} = \dfrac{\partial L}{\partial h_{il}}\dfrac{\partial h_{il}}{\partial f_{il}}=\dfrac{\partial L}{\partial h_{il}}\mathbb{1}(f_{il} > 0)$$ gradient with respect to weighted features (i x l) 
 
 
-* $\dfrac{\partial L}{\partial W^{(1)}_{kl}} = \dfrac{\partial L}{\partial f_{il}}\dfrac{\partial f_{il}}{\partial W^{(1)}_{kl}}=\sum\limits_iX^T_{ki}\dfrac{\partial L}{\partial f_{il}}$ gradient with respect to first weight matrix (k x l)
+* $$\dfrac{\partial L}{\partial W^{(1)}_{kl}} = \dfrac{\partial L}{\partial f_{il}}\dfrac{\partial f_{il}}{\partial W^{(1)}_{kl}}=\sum\limits_iX^T_{ki}\dfrac{\partial L}{\partial f_{il}}$$ gradient with respect to first weight matrix (k x l)
 
 
-* $\dfrac{\partial L}{\partial b^{(1)}_l} = \dfrac{\partial L}{\partial f_{il}}\dfrac{\partial f_{il}}{\partial b^{(1)}_{l}}=\sum\limits_i\dfrac{\partial L}{\partial f_{il}}$ gradient with respect to first bias vector (row vector length l)
+* $$\dfrac{\partial L}{\partial b^{(1)}_l} = \dfrac{\partial L}{\partial f_{il}}\dfrac{\partial f_{il}}{\partial b^{(1)}_{l}}=\sum\limits_i\dfrac{\partial L}{\partial f_{il}}$$ gradient with respect to first bias vector (row vector length l)
 
 ```python
 #gradient of loss with respect to the scores
@@ -124,7 +124,7 @@ grads['b1'] += 2*reg*b1
 grads['b2'] += 2*reg*b2
 ```
 
-And that's it! An important point here is that we could speed up our computation because *we already calculated a bunch of values we used in the loss*. There is no fundamental reason I know of that it has to be this way. Not all derivatives look like their original function, $e^x$ is the only function with this explicit property. Also, the chain rule does not tell you exactly how to break up a derivative into smaller parts. Sometimes there's one way that is obviously easier, but this may not be true with complex derivatives.
+And that's it! An important point here is that we could speed up our computation because *we already calculated a bunch of values we used in the loss*. There is no fundamental reason I know of that it has to be this way. Not all derivatives look like their original function, $$e^x$$ is the only function with this explicit property. Also, the chain rule does not tell you exactly how to break up a derivative into smaller parts. Sometimes there's one way that is obviously easier, but this may not be true with complex derivatives.
 
 This is all to say, that back-propagation in and of itself does not calculate gradients efficiently. You have to make good choices! Your goal should be to use gradients where you use as many of the forward pass values as possible to calculate the backward-pass. 
 
