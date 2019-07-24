@@ -39,12 +39,9 @@ The *forward pass* then looks like so:
 - $$h_{il} = max(0, f^{(1)}_{il})$$ hidden classes from the activation function
 
 
-- $$f^{(2)}_{ij} = \sum\limits_l h^{(1)}_{il}W^{(2)}_{lj} + b^{(2)}_j$$ 2nd layer weighted features
+- $$s_{ij} = \sum\limits_l h^{(1)}_{il}W^{(2)}_{lj} + b^{(2)}_j$$ 2nd layer scores
 
-- $$s_{ij} = softmax(f^{(2)}_{ij})$$ output layer scores
-
-
-- $$L_i = -log(s_{iy_i})$$ log loss
+- $$L_i = -log(softmax(s_{iy_i})$$ log loss
 
 
 - $$L = \dfrac{1}{N}\sum\limits_i L_i + \lambda\left(\sum\limits_{k,l}(W^{(1)}_{kl})^2 + \sum\limits_{l,j}(W^{(2)}_{lj})^2 + \sum\limits_l (b^{(1)}_{l})^2+ \sum\limits_j (b^{(2)}_{j})^2\right )$$ loss with regularization
