@@ -3,7 +3,7 @@ title: Baseline Statistical Model
 layout: default
 permalink: /so_baseline/
 ---
-### [Previous: Statistical Inference](https://cemalec.github.io/so_statistical_inference)
+### [Previous: Statistical Inference](https://cemalec.github.io/so_statistical_inference) | [Next: Model Extensions](https://cemalec.github.io/Model_Extensions/so_model_extensions)
 
 # Baseline Model
 As a simple model for this binary prediction, we choose logistic regression. This is both a conceptually simple and easy to interpret model, and can be extended to include more classes if necessary.
