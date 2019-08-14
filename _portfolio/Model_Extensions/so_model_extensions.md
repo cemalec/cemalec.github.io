@@ -1,7 +1,7 @@
 ---
 title: Model Extensions
 layout: default
-permalink: /model_extensions/
+permalink: /so_model_extensions/
 ---
 
 ## Improving the Model
