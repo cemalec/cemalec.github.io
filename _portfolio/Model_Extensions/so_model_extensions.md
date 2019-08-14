@@ -4,6 +4,9 @@ layout: default
 permalink: /so_model_extensions/
 ---
 
+
+### [Previous: Baseline Model](https://cemalec.github.io/so_baseline)
+
 ## Improving the Model
 
 The model as it stands does not have high recall or precision. A 40% reduction in dropouts may be extremely valuable to a school district, however, the model at best predicts which students are more likely to dropout. There is no evidence from the data itself that there is a particular strategy that will cause a dropout case to shift to a non-dropout case. This would be the focus of additional work.
