@@ -1,3 +1,8 @@
+---
+title: Model Extensions
+layout: default
+permalink: /model_extensions/
+---
 
 ## Improving the Model
 
@@ -109,7 +114,7 @@ plt.show()
 ```
 
 
-![png](output_6_0.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Model_Extensions/output_6_0.png "Figure 1")
 
 
 
@@ -124,7 +129,7 @@ plt.show()
 ```
 
 
-![png](output_7_0.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Model_Extensions/output_7_0.png "Figure 2")
 
 
 We can see from the precision-recall curve that there is no cutoff that provides both high precision and recall in this model. We can also see clearly from the ROC curve that our model is in fact performing better than guessing, since it is entirely above the line where the True Positive and False Positive rates are the same. Therefore we should try another method, undersampling.
@@ -168,7 +173,7 @@ plt.show()
 
 
 
-![png](output_9_1.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Model_Extensions/output_9_1.png "Figure 3")
 
 
 The recall is significantly higher, nearly 70%, and the precision drops a bit. We need to be careful, because eventually the recall can be made very high merely by guessing that everyone is a dropout. In this case the precision would be the proportion of students who actually drop out. 
@@ -209,7 +214,7 @@ plt.show()
 
 
 
-![png](output_11_1.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Model_Extensions/output_11_1.png "Figure 4")
 
 
 ## Change the score function
@@ -286,7 +291,7 @@ plt.show()
 
 
 
-![png](output_14_1.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Model_Extensions/output_14_1.png "Figure 5")
 
 
 Now we've lost a lot of recall again, let's try to combine a couple methods. Oversampling honestly did about the same as classweights, except classweights is much faster.
@@ -356,7 +361,7 @@ plt.show()
 
 
 
-![png](output_17_1.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Model_Extensions/output_17_1.png "Figure 6")
 
 
 This is the best of both worlds, and may perhaps be improved by more careful parameter selection. What would be really nice, is the ability to actually choose between models with high precision and models with high recall.
@@ -1025,7 +1030,7 @@ plt.show()
 ```
 
 
-![png](output_25_0.png)
+![alt text](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/Model_Extensions/output_25_0.png "Figure 7")
 
 
 We can clearly see that the higher we set beta, the more recall is weighted in our model selection. In this way we can select models with various trade-offs of precision and recall. Though there does appear to be a curve on which most of our models fall. Pushing beyond this curve would be the goal of future work.
