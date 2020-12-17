@@ -94,4 +94,4 @@ plt.show()
 ```
 
 
-![png](/is_data_wrangling_01.png)
+![png](cemalec.github.io/_portfolio/image_segmentation/is_data_wrangling_01.png)
