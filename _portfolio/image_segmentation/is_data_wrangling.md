@@ -94,4 +94,4 @@ plt.show()
 ```
 
 
-![png](is_data_wrangling_01.png)
+![png](/is_data_wrangling_01.png)
