@@ -4,7 +4,7 @@ title: Image Segmentation - Data Wrangling
 permalink: /is_data_wrangling/
 ---
 
-### [Next: Exploratory Data Analysis](https://cemalec.github.io/is_eda)
+### [Next: Exploratory Data Analysis](is_eda.md)
 
 ```python
 #Import packages
@@ -94,4 +94,4 @@ plt.show()
 ```
 
 
-![png](https://github.com/cemalec/cemalec.github.io/blob/master/_portfolio/image_segmentation/is_data_wrangling_01.png)
+![png](./is_data_wrangling_01.png)
