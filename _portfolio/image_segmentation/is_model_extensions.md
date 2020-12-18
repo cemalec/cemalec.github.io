@@ -21,32 +21,6 @@ from scipy.ndimage.interpolation import map_coordinates
 from scipy.ndimage.filters import gaussian_filter
 ```
 
-    C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorflow\python\framework\dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-      _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-    C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorflow\python\framework\dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-      _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-    C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorflow\python\framework\dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-      _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-    C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorflow\python\framework\dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-      _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-    C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorflow\python\framework\dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-      _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-    C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorflow\python\framework\dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-      np_resource = np.dtype([("resource", np.ubyte, 1)])
-    C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-      _np_qint8 = np.dtype([("qint8", np.int8, 1)])
-    C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-      _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
-    C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-      _np_qint16 = np.dtype([("qint16", np.int16, 1)])
-    C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-      _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
-    C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-      _np_qint32 = np.dtype([("qint32", np.int32, 1)])
-    C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorboard\compat\tensorflow_stub\dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
-      np_resource = np.dtype([("resource", np.ubyte, 1)])
-
-
 
 ```python
 #Import data files
@@ -246,146 +220,10 @@ decoder0 = decoder_block(decoder1, encoder0, 32)
 outputs = layers.Conv2D(1, (1, 1), activation='sigmoid')(decoder0)
 ```
 
-    WARNING: Logging before flag parsing goes to stderr.
-    W1128 21:05:29.795977 10196 deprecation.py:506] From C:\Users\Malec\AppData\Roaming\Python\Python37\site-packages\tensorflow\python\ops\init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
-    Instructions for updating:
-    Call initializer instance with the dtype argument instead of passing it to the constructor
-
-
-
 ```python
 model = models.Model(inputs=[inputs], outputs=[outputs])
 model.summary()
 ```
-
-    Model: "model"
-    __________________________________________________________________________________________________
-    Layer (type)                    Output Shape         Param #     Connected to                     
-    ==================================================================================================
-    input_1 (InputLayer)            [(None, 256, 256, 1) 0                                            
-    __________________________________________________________________________________________________
-    conv2d (Conv2D)                 (None, 256, 256, 32) 320         input_1[0][0]                    
-    __________________________________________________________________________________________________
-    batch_normalization (BatchNorma (None, 256, 256, 32) 128         conv2d[0][0]                     
-    __________________________________________________________________________________________________
-    activation (Activation)         (None, 256, 256, 32) 0           batch_normalization[0][0]        
-    __________________________________________________________________________________________________
-    max_pooling2d (MaxPooling2D)    (None, 128, 128, 32) 0           activation[0][0]                 
-    __________________________________________________________________________________________________
-    conv2d_1 (Conv2D)               (None, 128, 128, 64) 18496       max_pooling2d[0][0]              
-    __________________________________________________________________________________________________
-    batch_normalization_1 (BatchNor (None, 128, 128, 64) 256         conv2d_1[0][0]                   
-    __________________________________________________________________________________________________
-    activation_1 (Activation)       (None, 128, 128, 64) 0           batch_normalization_1[0][0]      
-    __________________________________________________________________________________________________
-    max_pooling2d_1 (MaxPooling2D)  (None, 64, 64, 64)   0           activation_1[0][0]               
-    __________________________________________________________________________________________________
-    conv2d_2 (Conv2D)               (None, 64, 64, 128)  73856       max_pooling2d_1[0][0]            
-    __________________________________________________________________________________________________
-    batch_normalization_2 (BatchNor (None, 64, 64, 128)  512         conv2d_2[0][0]                   
-    __________________________________________________________________________________________________
-    activation_2 (Activation)       (None, 64, 64, 128)  0           batch_normalization_2[0][0]      
-    __________________________________________________________________________________________________
-    max_pooling2d_2 (MaxPooling2D)  (None, 32, 32, 128)  0           activation_2[0][0]               
-    __________________________________________________________________________________________________
-    conv2d_3 (Conv2D)               (None, 32, 32, 256)  295168      max_pooling2d_2[0][0]            
-    __________________________________________________________________________________________________
-    batch_normalization_3 (BatchNor (None, 32, 32, 256)  1024        conv2d_3[0][0]                   
-    __________________________________________________________________________________________________
-    activation_3 (Activation)       (None, 32, 32, 256)  0           batch_normalization_3[0][0]      
-    __________________________________________________________________________________________________
-    max_pooling2d_3 (MaxPooling2D)  (None, 16, 16, 256)  0           activation_3[0][0]               
-    __________________________________________________________________________________________________
-    conv2d_4 (Conv2D)               (None, 16, 16, 512)  1180160     max_pooling2d_3[0][0]            
-    __________________________________________________________________________________________________
-    batch_normalization_4 (BatchNor (None, 16, 16, 512)  2048        conv2d_4[0][0]                   
-    __________________________________________________________________________________________________
-    activation_4 (Activation)       (None, 16, 16, 512)  0           batch_normalization_4[0][0]      
-    __________________________________________________________________________________________________
-    max_pooling2d_4 (MaxPooling2D)  (None, 8, 8, 512)    0           activation_4[0][0]               
-    __________________________________________________________________________________________________
-    conv2d_5 (Conv2D)               (None, 8, 8, 1024)   4719616     max_pooling2d_4[0][0]            
-    __________________________________________________________________________________________________
-    batch_normalization_5 (BatchNor (None, 8, 8, 1024)   4096        conv2d_5[0][0]                   
-    __________________________________________________________________________________________________
-    activation_5 (Activation)       (None, 8, 8, 1024)   0           batch_normalization_5[0][0]      
-    __________________________________________________________________________________________________
-    conv2d_transpose (Conv2DTranspo (None, 16, 16, 512)  2097664     activation_5[0][0]               
-    __________________________________________________________________________________________________
-    concatenate (Concatenate)       (None, 16, 16, 1024) 0           activation_4[0][0]               
-                                                                     conv2d_transpose[0][0]           
-    __________________________________________________________________________________________________
-    batch_normalization_6 (BatchNor (None, 16, 16, 1024) 4096        concatenate[0][0]                
-    __________________________________________________________________________________________________
-    activation_6 (Activation)       (None, 16, 16, 1024) 0           batch_normalization_6[0][0]      
-    __________________________________________________________________________________________________
-    conv2d_6 (Conv2D)               (None, 16, 16, 512)  4719104     activation_6[0][0]               
-    __________________________________________________________________________________________________
-    batch_normalization_7 (BatchNor (None, 16, 16, 512)  2048        conv2d_6[0][0]                   
-    __________________________________________________________________________________________________
-    activation_7 (Activation)       (None, 16, 16, 512)  0           batch_normalization_7[0][0]      
-    __________________________________________________________________________________________________
-    conv2d_transpose_1 (Conv2DTrans (None, 32, 32, 256)  524544      activation_7[0][0]               
-    __________________________________________________________________________________________________
-    concatenate_1 (Concatenate)     (None, 32, 32, 512)  0           activation_3[0][0]               
-                                                                     conv2d_transpose_1[0][0]         
-    __________________________________________________________________________________________________
-    batch_normalization_8 (BatchNor (None, 32, 32, 512)  2048        concatenate_1[0][0]              
-    __________________________________________________________________________________________________
-    activation_8 (Activation)       (None, 32, 32, 512)  0           batch_normalization_8[0][0]      
-    __________________________________________________________________________________________________
-    conv2d_7 (Conv2D)               (None, 32, 32, 256)  1179904     activation_8[0][0]               
-    __________________________________________________________________________________________________
-    batch_normalization_9 (BatchNor (None, 32, 32, 256)  1024        conv2d_7[0][0]                   
-    __________________________________________________________________________________________________
-    activation_9 (Activation)       (None, 32, 32, 256)  0           batch_normalization_9[0][0]      
-    __________________________________________________________________________________________________
-    conv2d_transpose_2 (Conv2DTrans (None, 64, 64, 128)  131200      activation_9[0][0]               
-    __________________________________________________________________________________________________
-    concatenate_2 (Concatenate)     (None, 64, 64, 256)  0           activation_2[0][0]               
-                                                                     conv2d_transpose_2[0][0]         
-    __________________________________________________________________________________________________
-    batch_normalization_10 (BatchNo (None, 64, 64, 256)  1024        concatenate_2[0][0]              
-    __________________________________________________________________________________________________
-    activation_10 (Activation)      (None, 64, 64, 256)  0           batch_normalization_10[0][0]     
-    __________________________________________________________________________________________________
-    conv2d_8 (Conv2D)               (None, 64, 64, 128)  295040      activation_10[0][0]              
-    __________________________________________________________________________________________________
-    batch_normalization_11 (BatchNo (None, 64, 64, 128)  512         conv2d_8[0][0]                   
-    __________________________________________________________________________________________________
-    activation_11 (Activation)      (None, 64, 64, 128)  0           batch_normalization_11[0][0]     
-    __________________________________________________________________________________________________
-    conv2d_transpose_3 (Conv2DTrans (None, 128, 128, 64) 32832       activation_11[0][0]              
-    __________________________________________________________________________________________________
-    concatenate_3 (Concatenate)     (None, 128, 128, 128 0           activation_1[0][0]               
-                                                                     conv2d_transpose_3[0][0]         
-    __________________________________________________________________________________________________
-    batch_normalization_12 (BatchNo (None, 128, 128, 128 512         concatenate_3[0][0]              
-    __________________________________________________________________________________________________
-    activation_12 (Activation)      (None, 128, 128, 128 0           batch_normalization_12[0][0]     
-    __________________________________________________________________________________________________
-    conv2d_9 (Conv2D)               (None, 128, 128, 64) 73792       activation_12[0][0]              
-    __________________________________________________________________________________________________
-    batch_normalization_13 (BatchNo (None, 128, 128, 64) 256         conv2d_9[0][0]                   
-    __________________________________________________________________________________________________
-    activation_13 (Activation)      (None, 128, 128, 64) 0           batch_normalization_13[0][0]     
-    __________________________________________________________________________________________________
-    conv2d_transpose_4 (Conv2DTrans (None, 256, 256, 32) 8224        activation_13[0][0]              
-    __________________________________________________________________________________________________
-    concatenate_4 (Concatenate)     (None, 256, 256, 64) 0           activation[0][0]                 
-                                                                     conv2d_transpose_4[0][0]         
-    __________________________________________________________________________________________________
-    batch_normalization_14 (BatchNo (None, 256, 256, 64) 256         concatenate_4[0][0]              
-    __________________________________________________________________________________________________
-    activation_14 (Activation)      (None, 256, 256, 64) 0           batch_normalization_14[0][0]     
-    __________________________________________________________________________________________________
-    conv2d_10 (Conv2D)              (None, 256, 256, 32) 18464       activation_14[0][0]              
-    __________________________________________________________________________________________________
-    batch_normalization_15 (BatchNo (None, 256, 256, 32) 128         conv2d_10[0][0]                  
-    __________________________________________________________________________________________________
-    activation_15 (Activation)      (None, 256, 256, 32) 0           batch_normalization_15[0][0]     
-    __________________________________________________________________________________________________
-    conv2d_11 (Conv2D)              (None, 256, 256, 1)  33          activation_15[0][0]              
     ==================================================================================================
     Total params: 15,388,385
     Trainable params: 15,378,401
@@ -401,9 +239,7 @@ plot_model(model,to_file = 'model_plot.png',rankdir='TB')
 ```
 
 
-
-
-![png](is_model_extensions_01.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_model_extensions_01.png =400x1200)
 
 
 
@@ -523,14 +359,6 @@ filter_size = 3x3
 17: Deeper network, Batch size 10, log dice loss, lr=1e-3,eps=1e-4
 '''
 ```
-
-
-
-
-    '\nNo augmentation\ndefault lr 1e-3 \nbatch_size = 15 \nloss function bce \nnormalization_method=batch\nmodel_depth = 5 maxpool layers, \nfilter_size = 3x3\n01: True 5x5 filter\n02: Effective 5x5 filter\n03: 16 filter layer at beginning end\n04: 2048 filter layer at center\n05: Layer normalization\n06: No normalization\n07: Log Dice loss\n08: Batch size 10\n09: Batch size 5\n10: eps 1e-4\n11: eps 1e-1\n12: lr 1e-1\n13: lr 1e-5\n14: Batch size = 20\n15: Batch size = 20\n16: Deeper network\n17: Deeper network, Batch size 10, log dice loss, lr=1e-3,eps=1e-4\n'
-
-
-
 
 ```python
 #Fit the model
@@ -654,7 +482,7 @@ plt.show()
 ```
 
 
-![png](is_model_extensions_02.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_model_extensions_02.png)
 
 
 
@@ -740,4 +568,4 @@ plt.show()
 ```
 
 
-![png](is_model_extensions_03.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_model_extensions_03.png)
