@@ -4,7 +4,7 @@ title: Image Segmentation: Baseline Model
 permalink: /is_baseline_model/
 ---
 
-### [Previous: Statistical Inference](https://cemalec.github.io/is_statistical_inference)|[Next: Model Extensions](https://cemalec.github.io/is_model_extensions)
+### [Previous: Statistical Inference](is_statistical_inference.md) | [Next: Model Extensions](is_model_extensions.md)
 
 ```python
 #Import necessary packages
