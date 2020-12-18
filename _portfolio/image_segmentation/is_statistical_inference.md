@@ -4,7 +4,7 @@ title: Image Segmentation: Statistical Inference
 permalink: /is_statistical_inference/
 ---
 
-### [Previous: Exploratory Data Analysis](/_portfolio/image_segmentation/is_eda)|[Next: Baseline Model](/_portfolio/image_segmentation/is_baseline_model)
+### [Previous: Exploratory Data Analysis](https://cemalec.github.io/is_eda)|[Next: Baseline Model](https://cemalec.github.io/is_baseline_model)
 
 ```python
 #Import necessary packages and set plot types to allow interactive plots
@@ -99,7 +99,7 @@ _ = z_correlation(training_inputs,identity)
 ```
 
 
-![png](/_portfolio/image_segmentation/is_statistical_inference_01.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_statistical_inference_01.png)
 
 
 
@@ -109,7 +109,7 @@ _ = z_correlation(training_inputs,flip_right_left)
 ```
 
 
-![png](is_statistical_inference_02.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_statistical_inference_02.png)
 
 
 
@@ -119,7 +119,7 @@ _ = z_correlation(training_inputs,flip_up_down)
 ```
 
 
-![png](is_statistical_inference_03.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_statistical_inference_03.png)
 
 
 
@@ -145,7 +145,7 @@ plt.show()
 ```
 
 
-![png](is_statistical_inference_04.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_statistical_inference_04.png)
 
 
 
@@ -177,7 +177,7 @@ plt.show()
 
 
 
-![png](is_statistical_inference_05.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_statistical_inference_05.png)
 
 
 
@@ -235,7 +235,7 @@ plt.show()
 ```
 
 
-![png](is_statistical_inference_06.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_statistical_inference_06.png)
 
 
 
@@ -261,4 +261,4 @@ plt.show()
 ```
 
 
-![png](is_statistical_inference_07.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_statistical_inference_07.png)
