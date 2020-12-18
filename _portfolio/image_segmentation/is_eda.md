@@ -85,7 +85,7 @@ plt.show()
 ```
 
 
-![png](/_portfolio/image_segmentation/is_eda_01.png)
+![png](https://cemalec.github.io/_portfolio/image_segmentation/is_eda_01.png)
 
 
 
@@ -129,7 +129,7 @@ plt.show()
 ```
 
 
-![png](/_portfolio/image_segmentation/is_eda_02.png)
+![png](https://cemalec.github.io/_portfolio/image_segmentation/is_eda_02.png)
 
 
 
@@ -207,7 +207,7 @@ plt.show()
 ```
 
 
-![png](/_portfolio/image_segmentation/is_eda_03.png)
+![png](https://cemalec.github.io/_portfolio/image_segmentation/is_eda_03.png)
 
 
 
@@ -225,7 +225,7 @@ plt.hist(np.ravel(mitochondria_image), bins = 30,alpha = 0.5, color = 'red',dens
 plt.hist(np.ravel(nonmitochondria_image), bins = 30,alpha = 0.5, color = 'blue',density = True)
 plt.show()
 ```
-![png](/_portfolio/image_segmentation/is_eda_04.png)
+![png](https://cemalec.github.io/_portfolio/image_segmentation/is_eda_04.png)
 
 ```python
 #Set up some data to get a 3D look at mitochondria
@@ -248,6 +248,6 @@ ax.set_ylim3d(0,1024)
 ax.set_zlim3d(0,1024)
 plt.show()
 ```
-![png](/_portfolio/image_segmentation/is_eda_05.png)
+![png](https://cemalec.github.io/_portfolio/image_segmentation/is_eda_05.png)
 
 
