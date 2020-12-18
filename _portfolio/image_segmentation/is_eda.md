@@ -129,7 +129,7 @@ plt.show()
 ```
 
 
-![png](is_eda_02.png)
+![png](./is_eda_02.png)
 
 
 
