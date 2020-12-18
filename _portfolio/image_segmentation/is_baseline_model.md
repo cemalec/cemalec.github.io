@@ -172,14 +172,7 @@ from tensorflow.keras.utils import plot_model
 
 plot_model(model,to_file = 'model_plot.png',rankdir='TB')
 ```
-
-
-
-
-![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_baseline_model_01.png =400x1200)
-
-
-
+<img src="https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_baseline_model_01.png" alt="drawing" height="800"/>
 
 ```python
 def dice_coeff(y_true, y_pred):
