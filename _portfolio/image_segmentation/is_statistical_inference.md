@@ -99,7 +99,7 @@ _ = z_correlation(training_inputs,identity)
 ```
 
 
-![png](is_statistical_inference_01.png)
+![png](/_portfolio/image_segmentation/is_statistical_inference_01.png)
 
 
 
