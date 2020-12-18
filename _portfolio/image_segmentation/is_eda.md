@@ -4,7 +4,7 @@ title: Image Segmentation - Exploratory Data Analysis
 permalink: /is_eda/
 ---
 
-### [Previous: Data Wrangling](./is_data_wrangling.md)|[Next: Statistical Inference](./is_statistical_inference.md)
+### [Previous: Data Wrangling](https://cemalec.github.io/is_data_wrangling)|[Next: Statistical Inference](https://cemalec.github.io/is_statistical_inference)
 
 ## Questions to answer:
 
@@ -85,7 +85,7 @@ plt.show()
 ```
 
 
-![png](./is_eda_01.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_eda_01.png)
 
 
 
@@ -129,7 +129,7 @@ plt.show()
 ```
 
 
-![png](./is_eda_02.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_eda_02.png)
 
 
 
@@ -207,7 +207,7 @@ plt.show()
 ```
 
 
-![png](./is_eda_03.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_eda_03.png)
 
 
 
@@ -225,7 +225,7 @@ plt.hist(np.ravel(mitochondria_image), bins = 30,alpha = 0.5, color = 'red',dens
 plt.hist(np.ravel(nonmitochondria_image), bins = 30,alpha = 0.5, color = 'blue',density = True)
 plt.show()
 ```
-![png](./is_eda_04.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_eda_04.png)
 
 ```python
 #Set up some data to get a 3D look at mitochondria
@@ -248,6 +248,6 @@ ax.set_ylim3d(0,1024)
 ax.set_zlim3d(0,1024)
 plt.show()
 ```
-![png](./is_eda_05.png)
+![png](https://raw.githubusercontent.com/cemalec/cemalec.github.io/master/_portfolio/image_segmentation/is_eda_05.png)
 
 
