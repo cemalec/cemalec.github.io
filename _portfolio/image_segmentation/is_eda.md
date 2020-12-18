@@ -85,7 +85,7 @@ plt.show()
 ```
 
 
-![png](https://cemalec.github.io/_portfolio/image_segmentation/is_eda_01.png)
+![png](../is_eda_01.png)
 
 
 
