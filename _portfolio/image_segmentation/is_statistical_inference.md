@@ -4,7 +4,7 @@ title: Image Segmentation: Statistical Inference
 permalink: /is_statistical_inference/
 ---
 
-### [Previous: Exploratory Data Analysis](../is_eda.md)|[Next: Baseline Model](../is_baseline_model.md)
+### [Previous: Exploratory Data Analysis](../is_eda)|[Next: Baseline Model](../is_baseline_model)
 
 ```python
 #Import necessary packages and set plot types to allow interactive plots
