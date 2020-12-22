@@ -6,6 +6,8 @@ permalink: /is_statistical_inference/
 
 ### [Previous: Exploratory Data Analysis](../is_eda)|[Next: Baseline Model](../is_baseline_model)
 
+Statistical Inference
+
 ```python
 #Import necessary packages and set plot types to allow interactive plots
 import numpy as np
