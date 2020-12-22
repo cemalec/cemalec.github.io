@@ -4,7 +4,7 @@ title: Image Segmentation: Model Extensions
 permalink: /is_model_extensions/
 ---
 
-### [Previous: Baseline Model](is_baseline_model.md)
+### [Previous: Baseline Model](./is_baseline_model)
 
 ```python
 #Import necessary packages
