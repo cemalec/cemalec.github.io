@@ -4,7 +4,7 @@ title: Image Segmentation - Exploratory Data Analysis
 permalink: /is_eda/
 ---
 
-### [Previous: Data Wrangling](../is_data_wrangling) | [Next: Statistical Inference](../is_statistical_inference)
+### [Previous: Data Wrangling](../image_segmentation/is_data_wrangling) | [Next: Statistical Inference](../image_segmentation/is_statistical_inference)
 
 ## Questions to answer:
 
