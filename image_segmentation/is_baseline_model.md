@@ -4,7 +4,7 @@ title: Image Segmentation: Baseline Model
 permalink: /is_baseline_model/
 ---
 
-### [Previous: Statistical Inference](../is_statistical_inference) | [Next: Model Extensions](../is_model_extensions)
+### [Previous: Statistical Inference](../image_segmentation/is_statistical_inference) | [Next: Model Extensions](../image_segmentation/is_model_extensions)
 
 ```python
 #Import necessary packages
