@@ -4,7 +4,7 @@ title: Image Segmentation: Statistical Inference
 permalink: /is_statistical_inference/
 ---
 
-### [Previous: Exploratory Data Analysis](../image_segmentation/is_eda) | [Next: Baseline Model](../image_segmentation/is_baseline_model)
+### [Previous: Exploratory Data Analysis](../is_eda) | [Next: Baseline Model](../is_baseline_model)
 
 Statistical Inference
 
