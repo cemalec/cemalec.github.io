@@ -4,7 +4,7 @@ title: Image Segmentation - Data Wrangling
 permalink: /is_data_wrangling/
 ---
 
-### [Next: Exploratory Data Analysis](../image_segmentation/is_eda)
+### [Next: Exploratory Data Analysis](../is_eda)
 
 ```python
 #Import packages
