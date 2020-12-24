@@ -1,6 +1,6 @@
 ---
 Title: Mini-projects and Notebooks
-layout: page
+layout: default
 permalink: /miniproj/
 ---
 
