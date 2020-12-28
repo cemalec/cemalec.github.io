@@ -4,6 +4,7 @@ layout: default
 permalink: /miniproj/
 ---
 
+
 A collection of minor projects and notebooks I've completed for various class projects.
 - [Using the Quandl API](_portfolio/mp_api.md)
 - [Clustering algorithms](_portfolio/Mini_Project_Clustering/mp_clustering.md)
