@@ -3,7 +3,7 @@ layout: default
 title: The Stardew Valley Grange Display - Basic Web Scraping
 permalink: /Stardew_Grange1/
 ---
-
+## The Stardew Valley Grange Display - Basic Web Scraping
 Lately, I've been pretty obsessed with Stardew Valley. It's a lovely little farming game, with a lot more to do besides grow crops. For the purpose of the next couple posts, I'd like to focus on an event that happens every fall, the Stardew Valley Fair. Specifically, you have the option of creating a Grange Display, and winning gets you 1000 star points. The star points aren't the most useful thing in the world, but like many things in the game, that's hardly the point. I'd just like to figure out how to get a perfect score with the least amount of work.
 
 Step one that I'll describe in this post is some super basic web-scraping of the [stardew valley wiki](https://stardewvalleywiki.com/). My goal is to grab the tables on the page about the fair to find the point values for the different items you can put in the grange display. I'll use the requests package to get the web page and parse the html using Beautiful Soup. My ultimate goal is to create a pandas data frame.
