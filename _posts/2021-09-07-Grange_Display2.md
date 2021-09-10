@@ -493,7 +493,7 @@ display_table(high_score_df.loc[category_filter,:].sort_values(['category','Pric
 
 Beer and Pale Ale have the same issue as wine. You can get gold quality cheese pretty easy and age it to iridium in about a week, so this is probably the way to go. If you have Ginger Island unlocked and really enjoy doing Professor Snail's bidding, iridium quality ostrich eggs are a way to get iridium quality mayo without the fully upgraded house.
 
-Poppys and Fairy Roses would also require deluxe fertilizer, and I'd like to minimize that, as radioactive ore/Qi coins don't grow on trees (suggestions for 1.6). The mushrooms benefit from Botanist, and Morel's/Chanterelles are available in the secret woods. Magma Cap's can be picked up in the volcano and Purple Mushrooms are available in Professor Snail's mushroom cave.
+Poppys and Fairy Roses would also require deluxe fertilizer, and I'd like to minimize that, as Qi coins don't grow on trees. It's hardly the scarcest thing in the game though, and I just got one as a drop in the dangerous mines. The mushrooms benefit from Botanist, and Morel's/Chanterelles are available in the secret woods. Magma Cap's can be picked up in the volcano and Purple Mushrooms are available in Professor Snail's mushroom cave.
 
 So that leaves me with a fairly low-stress 125 point grange display:
 
