@@ -1,4 +1,10 @@
-## Stardew Valley Grange Display: Reading Your Save File
+---
+layout: default
+title: The Stardew Valley Grange Display - Application
+permalink: /Stardew_Grange3/
+---
+
+## Stardew Valley Grange Display - Application
 Now that I've got an 'ideal' display made up, and I made lofty claims that I had a lot of it on hand, let's see the reality. I want to look at my save file to see what 8 point items I have lying around and which I need to actually aquire. In my current game, I just got the letter from the mayor saying the fair is in one week, so if I bother to figure this out now, I've got 125 points in the bag.
 
 I'll be using lxml's etree (element tree) to navigate the xml of the save file. I've put variables related to my save file's location into a notebook. I'm not too concerned about you all knowing my Farm's name and id, but it's a nice trick for other times when I might want to avoid showing various paths/names/etc from my computer.
