@@ -4,7 +4,6 @@ title: The Stardew Valley Grange Display - Analysis
 permalink: /Stardew_Grange2/
 ---
 ## The Stardew Valley Grange Display - Analysis
-
 According to the Stardew Valley wiki, the grange display's score is calculated according to the formula:
 
 14 + (# of items) + 5*(# of categories - max of 6) + (individual item scores)
