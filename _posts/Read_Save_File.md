@@ -1,3 +1,4 @@
+## Stardew Valley Grange Display: Reading Your Save File
 Now that I've got an 'ideal' display made up, and I made lofty claims that I had a lot of it on hand, let's see the reality. I want to look at my save file to see what 8 point items I have lying around and which I need to actually aquire. In my current game, I just got the letter from the mayor saying the fair is in one week, so if I bother to figure this out now, I've got 125 points in the bag.
 
 I'll be using lxml's etree (element tree) to navigate the xml of the save file. I've put variables related to my save file's location into a notebook. I'm not too concerned about you all knowing my Farm's name and id, but it's a nice trick for other times when I might want to avoid showing various paths/names/etc from my computer.
@@ -389,5 +390,5 @@ display_table(my_grange_items.loc[my_grange_items.Points == 8,['Item','category'
 I can see that I've got 4/6 categories with 8 point items, and sufficient iridium quality Large Milk to pad out the display to 9 items. I'm missing forage and fruit. I earlier identified coconuts and certain mushrooms as an easy way to get these.
 
 And sure enough, I threw in an iridium quality chanterelle and coconut and got 125 points on my grange display!
-<img src = 'Users/chrismalec/Desktop/PerfectGrange.png' alt = '125 Point Display'/>
-![text](/Users/chrismalec/Desktop/PerfectGrange.png)
+
+<img src='../images/PerfectGrange.png' alt='125 Point Grange Display' width=250px/>
