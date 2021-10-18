@@ -1,3 +1,9 @@
+---
+layout: default
+title: Market Manipulation
+permalink: /manip_1/
+---
+
 ### What is market manipulation?
 
 This is relatively subjective, but the crux of many types of manipulation is 'are you engaging with the market in good faith?' In other words, are you placing orders onto the books because you would like to buy a stock at the price you stated (or at least hope someone will sell to you at that price), or are you sending false signals to manipulate at what prices people are willing to buy/sell.
