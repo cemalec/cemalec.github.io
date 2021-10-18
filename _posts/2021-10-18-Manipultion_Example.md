@@ -3,10 +3,32 @@ layout: default
 title: Market Manipulation
 permalink: /manip_1/
 ---
+# Market Manipulation
+
+I'm moving on from my time at FinRA, and thought it was a good time to reflect on some of the interesting things I've learned about how the stock market works.
+
+### Super Basic Market Structure: The Order Book
+
+Every time a broker wants to make a trade, they put an an order (I want to buy 200 shares of stock A for $100 each). Until the order is canceled, or a seller is found that is willing to meet the buyer at their price, the order 'rests on the book.' Most heavily traded stocks do not have orders that rest long, unless the number of shares is exceptionally large or the price point is completely unreasonable.
+
+|time|side|quantity|price|
+|----|----|--------|-----|
+|9:30|B   |100     |45.00|
+|9:31|B   |200     |45.01|
+|9:31|S   |100     |45.05|
+|9:32|B   |50      |45.00|
+
+
+### Pretty Basic Market Structure: Reg NMS
+Reg NMS is an SEC rule that created the 'National Market System.' Stock exchanges became publicly traded companies and firms routing orders to the markets gained the obligation of 'best execution.' What exactly this means is fairly complicated, because it's not just about price. But a simple explanation is that if NYSE's order book has a stock selling at 45.05 and NASDAQ's order book has the same stock selling at 45.04, your buy order with Charles Schwab account needs to take the shares at NASDAQ at the better price. Complications set in when the number of shares in your order are not all available at the same price.
+
+The regulation is intended to keep brokerages from giving customers a bad deal. A couple more important terms are 'best bid' and 'best offer' that refer to the highest price anyone is willing to buy and the lowest price anyone is willing to sell respectively.
 
 ### What is market manipulation?
 
 This is relatively subjective, but the crux of many types of manipulation is 'are you engaging with the market in good faith?' In other words, are you placing orders onto the books because you would like to buy a stock at the price you stated (or at least hope someone will sell to you at that price), or are you sending false signals to manipulate at what prices people are willing to buy/sell.
+
+Here is an example of a sequence of orders that includes a manipulator. The manipulator enters many sell orders to entice the other sellers to lower their prices. Keep in mind, most people can't see that righthand column.
 
 |time|side|quantity|price|firm   |
 |----|----|--------|-----|-------|
@@ -23,28 +45,7 @@ This is relatively subjective, but the crux of many types of manipulation is 'ar
 |9:34|S   |600     |45.02|IllBite|
 |9:34|B   |600     |45.02|Manip  |
 
-### What is an order book?
-
-Every time a broker wants to make a trade, they put an an order (I want to buy 200 shares of stock A for $100 each). Until the order is canceled, or a seller is found that is willing to meet the buyer at their price, the order 'rests on the book.' Most heavily traded stocks do not have orders that rest long, unless the number of shares is exceptionally large or the price point is completely unreasonable.
-
-|time|side|quantity|price|
-|----|----|--------|-----|
-|9:30|B   |100     |45.00|
-|9:31|B   |200     |45.01|
-|9:31|S   |100     |45.05|
-|9:32|B   |50      |45.00|
-
-### What is Reg NMS
-Reg NMS is an SEC rule that created the 'National Market System.' Stock exchanges became publicly traded companies and firms routing orders to the markets gained the obligation of 'best execution.' This generally means that if NYSE's order book has a stock selling at 45.05 and NASDAQ's order book has the same stock selling at 45.04, your buy order with Charles Schwab account needs to take the shares at NASDAQ at the better price.
-
-The regulation is intended to keep brokerages from giving customers a bad deal, but it also created a complicated set of rules that can be gamed.
-
-### How can anyone find manipulation?
-
-Short answer: Regulators get to see much more detailed information than everyone else. It can be pretty difficult even with the extra information.
-
-
-
+I made up a more complicated example as a .csv file, let's see how it looks when plotted.
 ```python
 import pandas as pd
 manip_df = pd.read_csv('example_manip.csv',
@@ -300,78 +301,6 @@ display(manip_df)
       <td>50.00</td>
       <td>49.95</td>
     </tr>
-    <tr>
-      <th>18</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>49.96</td>
-      <td>200</td>
-      <td>9</td>
-      <td>Cancel</td>
-      <td>50.00</td>
-      <td>49.95</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.04</td>
-      <td>100</td>
-      <td>8</td>
-      <td>Cancel</td>
-      <td>50.00</td>
-      <td>49.95</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.03</td>
-      <td>500</td>
-      <td>7</td>
-      <td>Cancel</td>
-      <td>50.00</td>
-      <td>49.95</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.00</td>
-      <td>300</td>
-      <td>6</td>
-      <td>Cancel</td>
-      <td>50.00</td>
-      <td>49.95</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.01</td>
-      <td>150</td>
-      <td>5</td>
-      <td>Cancel</td>
-      <td>50.04</td>
-      <td>49.95</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.04</td>
-      <td>200</td>
-      <td>3</td>
-      <td>Cancel</td>
-      <td>50.05</td>
-      <td>49.95</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -384,361 +313,7 @@ def string_to_timestamp(string):
     timestamp_string = 'T'.join(timestamp_components[:2])
     return pd.to_datetime(timestamp_string)
 manip_df['timestamp'] = manip_df['Time'].apply(string_to_timestamp)
-manip_df
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Time</th>
-      <th>Firm</th>
-      <th>Side</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Order ID</th>
-      <th>Action</th>
-      <th>NBO</th>
-      <th>NBB</th>
-      <th>timestamp</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>10/13/2021 9:31:00.0 AM</td>
-      <td>Firm S</td>
-      <td>S</td>
-      <td>50.05</td>
-      <td>1000</td>
-      <td>1</td>
-      <td>Order</td>
-      <td>50.05</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:00.000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>10/13/2021 9:31:00.0 AM</td>
-      <td>Firm B</td>
-      <td>B</td>
-      <td>49.95</td>
-      <td>1000</td>
-      <td>2</td>
-      <td>Order</td>
-      <td>50.05</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:00.000</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>10/13/2021 9:31:00.2 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.04</td>
-      <td>200</td>
-      <td>3</td>
-      <td>Order</td>
-      <td>50.04</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:00.200</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>10/13/2021 9:31:01.5 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.03</td>
-      <td>100</td>
-      <td>4</td>
-      <td>Order</td>
-      <td>50.03</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:01.500</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>10/13/2021 9:31:03.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.03</td>
-      <td>100</td>
-      <td>4</td>
-      <td>Cancel</td>
-      <td>50.04</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:03.000</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>10/13/2021 9:31:03.2 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.01</td>
-      <td>150</td>
-      <td>5</td>
-      <td>Order</td>
-      <td>50.01</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:03.200</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>10/13/2021 9:31:03.3 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.00</td>
-      <td>300</td>
-      <td>6</td>
-      <td>Order</td>
-      <td>50.00</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:03.300</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>10/13/2021 9:31:04.5 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.03</td>
-      <td>500</td>
-      <td>7</td>
-      <td>Order</td>
-      <td>50.00</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:04.500</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>10/13/2021 9:31:04.6 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.04</td>
-      <td>200</td>
-      <td>8</td>
-      <td>Order</td>
-      <td>50.00</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:04.600</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>10/13/2021 9:31:05.7 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>49.96</td>
-      <td>200</td>
-      <td>9</td>
-      <td>Order</td>
-      <td>49.96</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:05.700</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>10/13/2021 9:31:05.7 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.04</td>
-      <td>100</td>
-      <td>8</td>
-      <td>Cancel</td>
-      <td>49.96</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:05.700</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>10/13/2021 9:31:05.5 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>49.97</td>
-      <td>600</td>
-      <td>10</td>
-      <td>Order</td>
-      <td>49.96</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:05.500</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>10/13/2021 9:31:05.6 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>49.96</td>
-      <td>300</td>
-      <td>11</td>
-      <td>Order</td>
-      <td>49.96</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:05.600</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>10/13/2021 9:31:06.8 AM</td>
-      <td>Firm S</td>
-      <td>S</td>
-      <td>49.96</td>
-      <td>1000</td>
-      <td>12</td>
-      <td>Order</td>
-      <td>49.96</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:06.800</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>10/13/2021 9:31:06.9 AM</td>
-      <td>Firm M</td>
-      <td>B</td>
-      <td>49.96</td>
-      <td>1000</td>
-      <td>13</td>
-      <td>Order</td>
-      <td>49.96</td>
-      <td>49.96</td>
-      <td>2021-10-13 09:31:06.900</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>10/13/2021 9:31:06.9 AM</td>
-      <td>Firm M</td>
-      <td>X</td>
-      <td>49.96</td>
-      <td>1000</td>
-      <td>12_13</td>
-      <td>Trade</td>
-      <td>49.96</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:06.900</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>49.96</td>
-      <td>300</td>
-      <td>11</td>
-      <td>Cancel</td>
-      <td>49.97</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:07.000</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>49.97</td>
-      <td>600</td>
-      <td>10</td>
-      <td>Cancel</td>
-      <td>50.00</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:07.000</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>49.96</td>
-      <td>200</td>
-      <td>9</td>
-      <td>Cancel</td>
-      <td>50.00</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:07.000</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.04</td>
-      <td>100</td>
-      <td>8</td>
-      <td>Cancel</td>
-      <td>50.00</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:07.000</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.03</td>
-      <td>500</td>
-      <td>7</td>
-      <td>Cancel</td>
-      <td>50.00</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:07.000</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.00</td>
-      <td>300</td>
-      <td>6</td>
-      <td>Cancel</td>
-      <td>50.00</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:07.000</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.01</td>
-      <td>150</td>
-      <td>5</td>
-      <td>Cancel</td>
-      <td>50.04</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:07.000</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>10/13/2021 9:31:07.0 AM</td>
-      <td>Firm M</td>
-      <td>S</td>
-      <td>50.04</td>
-      <td>200</td>
-      <td>3</td>
-      <td>Cancel</td>
-      <td>50.05</td>
-      <td>49.95</td>
-      <td>2021-10-13 09:31:07.000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
 
 ```python
 import plotly.express as px
