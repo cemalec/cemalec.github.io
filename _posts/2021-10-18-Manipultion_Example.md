@@ -774,8 +774,7 @@ fig.write_html("manip_example.html")
 fig.show()
 ```
 
-
-<center><iframe scrolling='no' seamless='seamless' style='border:none' src='../images/manip_example.html' width='100%' height='0' padding-bottom='75%'></iframe></center>
+<iframe scrolling='no' seamless='seamless' style='border:none' src='../images/manip_example.html' width='100%' height='400px'></iframe>
 
 In this example a Firm S is selling the stock and a Firm B is buying. The 'spread' or difference between best bid and best ask is 10 cents. The midpoint price, or what is often referred to as the 'price' if buyers and sellers met in the middle is \\$50.
 
