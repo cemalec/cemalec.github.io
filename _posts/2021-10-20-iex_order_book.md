@@ -1,5 +1,9 @@
+---
+layout: default
+title: IEX Order Book - Reading the Data
+permalink: /iex_1/
+---
 # The IEX Order Book - Reading the Data
-
 I recently gave a talk to the [Python Frederick Meetup](https://www.meetup.com/python-frederick/) about Pandas and wanted to show some financial data since that's what I've been working with lately. Specifically, I wanted something that had real time quotes and trades, but at best most sources give you the high, low, and median price aggregated over something like an hour or a day. There are a lot of sources of market data, and they have most definitely put a price on that data, a high price.
 
 [NYSE TAQ](https://www.nyse.com/market-data/historical) is about \\$1000/month for the first 12 months and \$500/month to go farther back in time. [NASDAQ TotalView](https://www.nasdaq.com/solutions/nasdaq-totalview) and similar products have a pretty complex fee structure, so I'm not *entirely* sure how much it costs. You can at least see the real time data on your RobinHood (Gold account) or Charles Schwab account, but historical data's going to cost you.
