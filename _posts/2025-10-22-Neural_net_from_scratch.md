@@ -33,7 +33,7 @@ class SoftMax(DifferentiableFunction):
         super().__init__(softmax, softmax_derivative)
 ```
 
-the ```python super ``` that appears in SoftMax calls the method from the parent class, so after defining the softamx function and its derivative, the class instantiates an instance of DifferentiableFunction with those two functions.
+the `super` that appears in SoftMax calls the method from the parent class, so after defining the softamx function and its derivative, the class instantiates an instance of DifferentiableFunction with those two functions.
 
 I also tried to get copilot to write me some tests, which for this task were pretty all right, but testing numerical functions is very straightforward in that you can give it some inputs (though I should include 0) and see if it outputs what it should. Also, though I see plenty of devs with more years under their belt than me do this, I feel like it could have made a fixture to house the test data since it's going to be used over and over again. However, there is something to be said for having it *right there* in the test.
 
