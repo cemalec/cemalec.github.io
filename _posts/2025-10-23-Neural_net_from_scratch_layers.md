@@ -1,12 +1,14 @@
 ---
 layout: default
-title: Numpy Neural Nets: Layers
+title: Numpy Neural Nets Layers
 permalink: /neural_net_2/
 ---
 
-# Like an Onion
+# Another Numpy Neural Net: Layers
 
 Deep Learning is built on layers, you input numbers on one side and the crank turns forward from layer to layer until it spits numbers out on the other side. Then the crank turns backwards and a loss out the other side spits a derivative on one side.  This incredible modularity is both necessary (you have to introduce a non-linearity periodically or all your operations can be combined into one linear transformation) and probably one reason why the field moves so fast. So let's start with the classic, fully connected layer, we'll loop back and do a couple more layers once we have the rest of the machinery in place.
+
+## A Base Class
 
 But first, a Base Class:
 
@@ -50,6 +52,8 @@ class Layer:
 The Layer Class defines what we would like all layers to have, and since layers are generally used by other objects, certain methods we need the layer to have.  So all layers have certain attributes specified in the `__init__` method, we can call this from subclasses and not wonder if we forgot something later. The point of the `@abstractmethod` decorator is that if a subclass does not implement the method underneath it, python will throw a `NotImplemented` error. There's a number of them, because if a layer is missing any of these, it won't work! It needs a forward pass, a backward pass, a way to initialize weights and a to/from_dict method. The `@classmethod` decorator means that the method can be called from the class rather than an instance (`Layer.from_dict(kwargs)` instead of `Layer(kwargs).from_dict(kwargs)`), this makes a lot of sense for 'load' type functions, where is seems silly to try to make some kind of dummy instance so you can instantiate the real instance.
 
 The last two 'dict' methods are really so that we can specify these models as a yaml or json file instead of inline. This can be very useful when you want to separate the code to run/train your model from the actual model architecture. You don't want to be pushing code to the repo just to try out a different number of hidden nodes.
+
+## Subclass
 
 So now we're ready to code up our Dense layer:
 ```python
