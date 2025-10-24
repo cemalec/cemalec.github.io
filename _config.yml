@@ -85,7 +85,7 @@ exclude:
   - README.md
   - CNAME
 
-theme: jekyll-theme-lanyon
+remote_theme: poole/layon
 collections: 
   portfolio:
     output: false#
