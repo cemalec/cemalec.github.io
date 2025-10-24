@@ -4,7 +4,7 @@ title: Numpy Neural Nets Layers
 permalink: /neural_net_2/
 ---
 
-# Another Numpy Neural Net: Layers
+## Another Numpy Neural Net: Layers
 
 Deep Learning is built on layers, you input numbers on one side and the crank turns forward from layer to layer until it spits numbers out on the other side. Then the crank turns backwards and a loss out the other side spits a derivative on one side.  This incredible modularity is both necessary (you have to introduce a non-linearity periodically or all your operations can be combined into one linear transformation) and probably one reason why the field moves so fast. So let's start with the classic, fully connected layer, we'll loop back and do a couple more layers once we have the rest of the machinery in place.
 

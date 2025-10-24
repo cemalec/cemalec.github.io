@@ -3,10 +3,10 @@ layout: default
 title: Numpy Neural Nets
 permalink: /neural_net_1/
 ---
-# Another Numpy Neural Net
+## Another Numpy Neural Net
 There's a number of resources on creating a neural net "from scratch" out there. I put the from scratch in quotes because numpy is a lot of machinery to start with, but I think it's a fair label because numpy *looks* about as close to the abstract math that powers these things as you can get. My goal here is to demonstrate development fundamentals I've picked up as a scientist-turned-dev, and another was to see just how much co-pilot could do for me on a task that I know is well represented in the training set. The answer short answer is, quite a bit, but you really need to know what you're doing or it'll get you into trouble fast.
 
-# The Bedrock of Deep Learning: Differentiable Functions
+## The Bedrock of Deep Learning: Differentiable Functions
 A well known but under-appreciated fact about most machine learning models is that the very important loss/activation functions have to be differentiable. So I could have made an Activation class and a Loss class first, but for pedagogical reasons, I made a DifferentiableFunction class first. The first subclass is of course our friend softmax.  I just typed in the class names, and tabbed my way to success on these, including type hints and function signatures for the callables (highly recommended).
 
 ```python
