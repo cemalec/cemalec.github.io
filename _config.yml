@@ -2,7 +2,7 @@
 title:               Chris Malec
 tagline:             'Data Scientist'
 description:         'My personal blog about data science, programming, and answering silly questions with powerful tools.'
-url:                 http://chris-malec.com
+url:                 https://chris-malec.com
 baseurl:             ''
 paginate:            5
 permalink:           pretty
