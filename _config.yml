@@ -20,7 +20,7 @@ plugins:
   - jekyll-remote-theme
 
 # Theme
-theme:       jekyll-theme-lanyon
+remote_theme:       poole/lanyon
 
 # Custom vars
 version:             1.1.0
