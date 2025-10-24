@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Market Manipulation
 permalink: /manip_1/
 ---

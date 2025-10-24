@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: IEX Order Book - Reading the Data
 permalink: /iex_1/
 ---

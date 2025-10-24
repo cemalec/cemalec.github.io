@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: The Stardew Valley Grange Display - Application
 permalink: /Stardew_Grange3/
 ---

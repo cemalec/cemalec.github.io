@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: The Stardew Valley Grange Display - Analysis
 permalink: /Stardew_Grange2/
 ---

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Numpy Neural Nets
 permalink: /neural_net_1/
 ---

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Gradients and You - Backpropagation and Neural Nets
 permalink: /Gradients_NN/
 ---

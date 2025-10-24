@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: The Stardew Valley Grange Display - Basic Web Scraping
 permalink: /Stardew_Grange1/
 ---

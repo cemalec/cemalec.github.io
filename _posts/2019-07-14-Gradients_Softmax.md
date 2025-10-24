@@ -1,6 +1,6 @@
 ---
 title: Gradients and You - Softmax
-layout: default
+layout: post
 permalink: /Gradients_Softmax/
 ---
 
