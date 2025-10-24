@@ -84,6 +84,7 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - jekyll-remote-theme
 
 remote_theme: poole/layon
 collections: 
