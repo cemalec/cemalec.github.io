@@ -17,8 +17,6 @@ author:
 gems:
 plugins:
   - jekyll-paginate
-  - jekyll-remote-theme
-remote_theme: poole/lanyon-jekyll-theme
 
 # Custom vars
 version:             1.1.0
